@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { config } from 'config';
 
 class Landing extends React.Component {
   render () {

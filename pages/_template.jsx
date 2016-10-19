@@ -11,18 +11,47 @@ class Template extends React.Component {
       <div>
         <Headroom>
           <Link
+            className="nav-item"
             to={prefixLink('/')}
           >
             Home
           </Link>
           <Link
-            className="example"
-            to={prefixLink('/about')}
+            className="nav-item"
+            to={prefixLink('/about/')}
           >
             About
           </Link>
+          <Link
+            className="nav-item"
+            to={prefixLink('/journal/')}
+          >
+            Journal
+          </Link>
+          <Link
+            className="nav-item"
+            to={prefixLink('/blog/')}
+          >
+            Blog
+          </Link>
+          <Link
+            className="nav-item"
+            to={prefixLink('/podcast/')}
+          >
+            Podcast
+          </Link>
+          <Link
+            className="nav-item"
+            to={prefixLink('/events/')}
+          >
+            Events
+          </Link>
         </Headroom>
-        {this.props.children}
+        <div
+          className="content"
+        >
+          {this.props.children}
+        </div>
       </div>
     )
   }

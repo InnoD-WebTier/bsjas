@@ -1,4 +1,13 @@
+@import "./variables";
+
 @import "./components/navigation";
+
+@import "./pages/about";
+@import "./pages/blog";
+@import "./pages/events";
+@import "./pages/journal";
+@import "./pages/landing";
+@import "./pages/podcast";
 
 @import "./vendors/normalize";
 

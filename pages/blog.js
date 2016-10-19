@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { config } from 'config';
 
 class Blog extends React.Component {
   render () {
