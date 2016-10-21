@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Circular';
-  src: url('./fonts/Circular.ttf')  format('truetype'),
+  src: url('./fonts/Circular-Book.ttf')  format('truetype'),
 }
 
 @font-face {
@@ -8,6 +8,7 @@
   src: url('./fonts/Circular-Bold.ttf')  format('truetype'),
 }
 
-$primary-red: '#9F001A';
+$primary-red: #9F001A;
+$primary-grey: #606060;
 $font-header: 'Circular-Bold', sans-serif;
 $font-body: 'Circular', sans-serif;
