@@ -9,6 +9,7 @@ class Events extends React.Component {
         <Helmet
           title={config.siteTitle}
         />
+<<<<<<< bbbbc705665ad38edbcd4ea5cbb22245dd8e15e4
         <div className="content-header">
           <span>Events / </span>
           <span className="subheader">Symposium</span>
@@ -90,9 +91,7 @@ class Events extends React.Component {
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     );
   }
