@@ -1,0 +1,65 @@
+.main-event,
+.upcoming-events{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    width: 1000px;
+}
+.main-event img{
+    display: block;
+    margin: auto;
+    width: 800px;
+    height: 550px;
+}
+.descript {
+    float: right;
+    margin-top: 8px;
+    margin-right: 100px;
+    color: $primary-grey;
+}
+.section-header{
+    color: $primary-red;
+}
+
+.upcoming-events{
+    margin-top: 64px;
+}
+.upcoming-events hr{
+    width: 800px;
+    margin-top: -8px;
+}
+.upcoming-events h3 {
+    margin-left: 100px;
+}
+.events-row {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    display: block;
+}
+.subevent {
+    display: inline-block;
+    margin-left: 48px;
+    margin-right: 48px;
+}
+.event-descript{
+    text-align: center;
+    display: block;
+}
+.event-title{
+    margin-top: 4px;
+    color: $primary-red;
+    font-size: 18px;
+}
+.event-info{
+    margin-top: 4px;
+    color: $primary-grey;
+    font-size: 12px;
+}
+.upcoming-events img{
+    width: 160px;
+    height: 160px;
+}
