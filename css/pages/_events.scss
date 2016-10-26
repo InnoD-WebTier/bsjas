@@ -1,65 +1,52 @@
-.main-event,
-.upcoming-events{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 28px;
-    width: 1000px;
-}
-.main-event img{
-    display: block;
-    margin: auto;
-    width: 800px;
-    height: 550px;
-}
-.descript {
-    float: right;
-    margin-top: 8px;
-    margin-right: 100px;
+// Renamed for consistency
+// display block is the default value, try to avoid setting specific widths in px!
+// try to use rem or % instead of px
+.events-main {
+  margin-top: 2rem;
+  width: 80%;
+  margin-left: 10%;
+  img {
+    width: 100%;
+  }
+  .desc {
+    text-align: right;
+    margin-top: 0.5rem;
     color: $primary-grey;
-}
-.section-header{
-    color: $primary-red;
+  }
 }
 
-.upcoming-events{
-    margin-top: 64px;
+.events-upcoming {
+  text-align: center;
+  margin-top: 2rem;
+  width: 80%;
+  margin-left: 10%;
+  .row {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
-.upcoming-events hr{
-    width: 800px;
-    margin-top: -8px;
-}
-.upcoming-events h3 {
-    margin-left: 100px;
-}
-.events-row {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 16px;
-    margin-bottom: 24px;
-    display: block;
-}
+
+// I gave it a slightly new look based off the client meeting
+// Using px values before (you can look on your local unless you already pulled this)
+// caused the page to distort on my comp if I dragged the window to be a little smaller
+// % is better at fixing this than fixed px values
 .subevent {
-    display: inline-block;
-    margin-left: 48px;
-    margin-right: 48px;
-}
-.event-descript{
+  display: inline-block;
+  width: 33%;
+  .desc {
     text-align: center;
-    display: block;
-}
-.event-title{
-    margin-top: 4px;
-    color: $primary-red;
-    font-size: 18px;
-}
-.event-info{
-    margin-top: 4px;
-    color: $primary-grey;
-    font-size: 12px;
-}
-.upcoming-events img{
-    width: 160px;
-    height: 160px;
+  }
+  img {
+    width: 100%;
+  }
+  .title {
+      margin-top: 0.25rem;
+      color: $primary-red;
+      font-size: 1rem;
+  }
+  .info {
+      margin-top: 0.25rem;
+      color: $primary-grey;
+      font-size: 0.8rem;
+  }
 }
