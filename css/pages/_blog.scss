@@ -1,0 +1,72 @@
+@fontface {
+	font-family: 'Circular';
+	src: url('fonts/Circular-Book.ttf');
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Circular';
+	color: #353535;
+}
+
+.navbar {
+	width: 100%;
+	height: 60px;
+	background: #A1011B;
+}
+
+.container {
+	width: 80%;
+	margin: 50px auto;
+}
+
+.post-header {
+	border-bottom: solid 1px lightgray;
+	margin-bottom: 20px;
+}
+
+.post-author {
+	font-size: 1.2em;
+	float: left;
+}
+
+.social {
+	float: right;
+}
+
+.social img {
+	height: 25px;
+	margin: 0px 2.5px;
+}
+
+.post-img {
+	width: 75%;
+	padding-top: 50px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	text-align: right;
+	color: gray;
+	font-size: 0.9em;
+	letter-spacing: 0.025em;
+}
+
+.post-img img {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.body-text {
+	width: 80%;
+	margin-top: 35px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	line-height: 1.5em;
+	font-family: 'Source Sans Pro';
+	font-size: 1.1em;
+}
+
+.body-text p {
+	margin: 35px 0px;
+}
