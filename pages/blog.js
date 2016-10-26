@@ -16,12 +16,12 @@ class Blog extends React.Component {
           <div>By Ariana Pemberton</div>
         </div>
         <div className="post-social">
-          <img src="../static/facebook.png"/>
-          <img src="../static/twitter.png"/>
-          <img src="../static/mail.png"/>
+          <img src="/assets/facebook.png"/>
+          <img src="/assets/twitter.png"/>
+          <img src="/assets/mail.png"/>
         </div>
         <div className="post-img">
-          <img src="../static/blog-pic.png"/>
+          <img src="/assets/blog-pic.png"/>
           <div>PHOTO CREDIT: The Guardian</div>
         </div>
         <div className="post-text">
