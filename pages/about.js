@@ -9,7 +9,7 @@ class About extends React.Component {
         <Helmet
           title={config.siteTitle}
         />
-        <div className="header">
+        <div className="content-header">
           <span>About / </span>
           <span className="subheader">Who is BSJAS?</span>
         </div>

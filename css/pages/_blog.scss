@@ -1,0 +1,52 @@
+// Example of nesting, typically do not nest more than one layer deep though.
+// Using an off-black was a good idea, I moved this higher up into _base.scss!
+.post {
+	font-family: $font-body;
+	.header {
+		border-bottom: solid 1px lightgray;
+		margin-bottom: 20px;
+	}
+	// Moved the margin-bottom here, since a post will always have an author.
+	.author {
+		font-size: 1.2rem;
+		float: left;
+		margin-bottom: 2rem;
+	}
+}
+
+// More nesting!
+.post-img {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 1rem;
+	div {
+		font-size: 0.9rem;
+		text-align: right;
+	}
+	img {
+		margin-bottom: 0.5rem;
+		width: 100%;
+	}
+}
+
+// Renamed to be scoped to this page
+.post-social {
+	float: right;
+	img {
+		height: 1.5rem;
+		margin: 0px 2.5px;
+	}
+}
+
+.post-text {
+	width: 80%;
+	margin-top: 35px;
+	// You only need to put the left margin at 10%.
+	margin-left: 10%;
+	line-height: 1.5rem;
+	font-family: $font-body;
+	font-size: 1rem;
+	p {
+		margin: 35px 0px;
+	}
+}
