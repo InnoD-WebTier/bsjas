@@ -27,3 +27,7 @@ build/Release
 node_modules
 .gatsby-context.js
 .sass-cache/
+
+
+# macOS
+.DS_Store
