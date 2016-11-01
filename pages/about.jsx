@@ -6,10 +6,7 @@ import { config } from 'config';
 // import data
 import data from '../data';
 
-// TODO: move this to external source
-let k_desc_p1 = "The Berkeley Student Journal of Asian Studies (BSJAS) is an Institute of East Asian Studies sponsored journal that strives to showcase the best undergraduate and graduate work at Berkeley related to Asia.";
 
-let k_desc_p2 = "We publish an annual academic journal in the Spring, a weekly blog, a bi-weekly podcast series and also host on campus events related to Asia as well as our annual symposium in the Spring.";
 
 /**
  * Profile consists of a circular headshot with name and position of person.
@@ -24,12 +21,17 @@ class Profile extends React.Component
 {    
     render()
     {
+        var style = {
+            backgroundImage: 'url("../assets/' + this.props.name + '.jpg")'
+        };
+        console.log(style.backgroundImage);
+        
         return (
         <div className='profile'>
-            <p className='profile-img'>{this.props.imgURL}</p>
+            <div className='profile-img' style={style}></div>
             <p className='profile-name'>{this.props.name}</p>
-            <p className='profile-text'>{this.props.position}</p>
-            <p className='profile-subtext'>{this.props.additional}</p>
+            <p className='profile-text'>{this.props.text}</p>
+            <p className='profile-more'>{this.props.more}</p>
         </div>
         );
     }
@@ -52,34 +54,33 @@ class About extends React.Component
         
         var p_list = [];
         for (var i = 0; i < desc_data.length; i++)
-            p_list.push( <p>{desc_data[i]}</p> );
+            p_list.push( <p key={'desc-'+i}>{desc_data[i]}</p> );
         
         return p_list;
     }
     
     // Get list of officer profiles.
-    getProfiles()
+    getProfiles(type = 'officers')
     {
-        var officer_data = data.officers;
+        var people = data[type];
         
-        var officer_list = [];
-        for (var i = 0; i < officer_data.length; i++)
+        var profile_items = [];
+        for (var i = 0; i < people.length; i++)
         {
-            let officer = officer_data[i];
+            let person = people[i];
             
-            officer_list.push(
-                <li key={'profile-' + i} className='profile-item'>    
+            profile_items.push(
+                <li key={type + '-' + i} className='profile-item'>    
                     <Profile 
-                        imgURL={null} 
-                        name={officer.name} 
-                        position='Editor-in-Chief' 
-                        additional={null} 
+                        name  = {person.name} 
+                        text  = {person.text}
+                        more  = {person.more} 
                     />
                 </li>
             );
         }
         
-        return officer_list;
+        return profile_items;
     }
     
     render()
@@ -89,16 +90,33 @@ class About extends React.Component
             <Helmet title={config.siteTitle} />
 
             <section className='desc fluid-width'>
-                <h3 className='header'>Who are we?</h3>
+                <h3 className='content-header'>
+                    <span>About / </span>
+                    <span className="subheader">Who is BSJAS?</span>
+                </h3>
                 
                 {this.getDescription()}
             </section>    
             
             <section className='officers fluid-width'>
-                <h3 className='header'>Officers</h3>
+                <h3 className='content-header'>
+                    <span>About / </span>
+                    <span className="subheader">Officers</span>
+                </h3>
 
                 <ul className='profile-grid'>
-                    {this.getProfiles()}
+                    {this.getProfiles('officers')}
+                </ul>
+            </section>
+                
+            <section className='bloggers fluid-width'>
+                <h3 className='content-header'>
+                    <span>About / </span>
+                    <span className="subheader">Blog Writers</span>
+                </h3>
+
+                <ul className='profile-grid'>
+                    {this.getProfiles('bloggers')}
                 </ul>
             </section>
         </div>

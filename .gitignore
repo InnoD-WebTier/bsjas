@@ -29,5 +29,8 @@ node_modules
 .sass-cache/
 
 
+# Build
+public
+
 # macOS
 .DS_Store

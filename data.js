@@ -9,8 +9,69 @@ export default
 	// Officer list
 	"officers": [
 		{
-			"name": "",
-			"position": ""
+			"name": "Spandana Singh",
+			"text": "Editor-in-Chief",
+            "more": "South Asia Blog Editor",
+		},
+        {
+			"name": "Grayson Dimick",
+			"text": "Managing Blog Editor",
+		},
+        {
+			"name": "Vincent Tran",
+			"text": "Events Manager",
+		},
+        {
+			"name": "Noah Gerber",
+			"text": "Social Media & Marketing Manager",
+		},
+        {
+			"name": "Jenisha Sabaratnam",
+			"text": "Southeat Asia & Central Asia Blog Editor",
+		},
+        {
+			"name": "Aric Chang",
+			"text": "North Asia & East Asia Blog Editor",
 		},
 	],
+    
+    // Blog writers
+    "bloggers": [
+        {
+			"name": "Shounak Chattopadhyay",
+			"text": "South Asia",
+		},
+        {
+			"name": "Ariana Pemberton",
+			"text": "South Asia",
+		},
+        {
+			"name": "Kevin Fulgham",
+			"text": "Southeast Asia",
+		},
+        {
+			"name": "Kristy Drutman",
+			"text": "SouthEast Asia",
+		},
+        {
+			"name": "Wantakan Arcardo",
+			"text": "Southeast Asia",
+		},
+        {
+			"name": "Dianne Chung",
+			"text": "Northeast Asia",
+		},
+        {
+			"name": "William Chu",
+			"text": "Northeast Asia",
+		},
+        {
+			"name": "Eric Yui",
+			"text": "Northeast Asia",
+		},
+        {
+			"name": "Nursultan Mussinov",
+			"text": "Central Asia",
+		},
+    ],
 }

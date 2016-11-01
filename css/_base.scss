@@ -5,8 +5,22 @@
     font-family: $font-body;
 }
 
+.content {
+  font-family: $font-body;
+  color: $off-black;
+  
+  margin: 0px auto;
+    
+  // Responsive UI breakpoints at 300px intervals upto 1200px.
+  @for $i from 1 through 4
+  {
+    @media screen and (min-width: $i * $profile-width) {
+      width: $i * $profile-width;
+    }   
+  }
+}
 
-.header {
+.content-header {
   font-family: $font-body;
   font-size: 1.2rem;
   text-align: center;
@@ -16,13 +30,14 @@
   width: 50%;
   min-width: 200px;
   margin: 25px auto;
+  border-bottom: 1px solid $primary-grey;
+    
   padding-bottom: 10px;
   position: relative;
   z-index : 1;
-    
-  border-bottom: 1px solid $primary-grey;
 
   .subheader {
+    display: inline-block;
     color: black;
   }
 }
