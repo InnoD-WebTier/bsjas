@@ -2,11 +2,11 @@
     margin: 0px;
     padding: 0px;
     
-    color: $off-black;
     font-family: $font-body;
 }
 
 .content {
+  color: $off-black;
   margin: 0px auto;
     
   // Responsive UI breakpoints at 300px intervals upto 1200px.
