@@ -8,41 +8,41 @@ ul, ol {
 
 .fluid-width {
     margin: 0px auto;
-    
+
     @for $i from 1 through 4
     {
         @media screen and (min-width: $i * $profile-width) {
             width: $i * $profile-width;
-        }   
+        }
     }
 }
 
 .section-title {
     color: $primary-grey;
     font-size: 2rem;
-    
+
     padding: 8px 0px;
     margin: 0px 0px 30px 0px;//50px;
 }
 
 
 /* --- DESCRIPTION --- */
+.about {
+  .desc {
+      margin-top: 40px;
+      margin-bottom: 100px;
+  }
+  .desc > p {
+      width: 75%;
+      min-width: 320px;
+      margin: 20px auto;
 
-.desc {
-    margin-top: 40px;
-    margin-bottom: 100px;
+      font-size: 1rem;
+      @media screen and (min-width: 3 * $profile-width) {
+          font-size: 1.25rem;
+      }
+  }
 }
-.desc > p {
-    width: 75%;
-    min-width: 320px;
-    margin: 20px auto;
-    
-    font-size: 1rem;
-    @media screen and (min-width: 3 * $profile-width) {
-        font-size: 1.25rem;
-    }
-}
-
 
 /* --- OFFICER LIST --- */
 
@@ -50,7 +50,7 @@ ul, ol {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    
+
     margin-top: 40px;
 }
 
@@ -62,19 +62,19 @@ ul, ol {
 .profile
 {
     $img-size: 200px;
-    
+
     width: $img-size;
     margin: 0px auto;
-    
+
     text-align: center;
-    
+
     * { margin: 8px 0px; }
-    
+
     .profile-img {
         width: $img-size;
         height: $img-size;
         border-radius: ($img-size / 2);
-        
+
         // TODO: Remove this once profile images are filled.
         background-color: lightgray;
     }
