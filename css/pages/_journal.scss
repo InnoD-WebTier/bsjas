@@ -1,59 +1,70 @@
 .journals {
-	margin-top:30px;
-}
-.tab-nav {
-	width:15%;
-	float:left;
-	margin-top:40px;
-}
-.tab {
-	padding:10px;
-	cursor:pointer;
-	font-weight:bold;
-}
-.tab:hover {
-	background-color:$primary-red;
-	color:#FFF;
-}
-.tab-content {
-	width:85%;
-	float:right;
-}
-.tab-title {
-	color:$primary-grey;
-	text-transform:uppercase;
-	text-align:center;
-	font-size:1.1em;
-	letter-spacing:.1em;
-}
-.cover-img {
-	width:30%;
-	float:left;
-	padding:20px;
-}
-.author {
-	text-align:right;
-	text-transform:uppercase;
-	padding-bottom:5px;
-}
-.title {
-	margin-bottom:10px;
-	text-align:right;
-	font-size:.9em;
-	padding-bottom:10px;
+	width:900px;
+	height:520px;
+	
+	.tab-nav {
+		width:130px;
+		float:left;
+		margin-top:40px;
+		
+		.tab {
+		  padding:10px;
+		  cursor:pointer;
+		  font-weight:bold;
+		  
+		  &:hover {
+			  background-color:$primary-red;
+			  color:#FFF;
+		  }
+		}
+		
+	}
+	.tab-content {
+		width:770px;
+		
+		.tab-title {
+			color:$primary-grey;
+			text-transform:uppercase;
+			text-align:center;
+			font-size:1.1em;
+			letter-spacing:.1em;
+		}
+		.cover-img {
+			width:200px;
+			float:left;
+			padding:20px;
+		}
+		.at-container {
+			width:400px;
+			float:right;
+		}
+		.author {
+			text-align:right;
+			text-transform:uppercase;
+			padding-bottom:5px;
+		}
+		.title {
+			margin-bottom:10px;
+			text-align:right;
+			font-size:.9em;
+			padding-bottom:10px;
+		}
+		
+	}
 }
 
 .submit {
-	margin-top:520px;
-}
-.question {
-	margin-bottom:10px;
-	font-size:1.2em;
-	font-weight:bold;
-}
-.answer {
-	margin-bottom:30px;
-}
-.blip {
-	color:$primary-red;
+	width:800px;
+	
+	.question {
+		margin-bottom:10px;
+		font-size:1.2em;
+		font-weight:bold;
+	}
+	.answer {
+		margin-bottom:30px;
+	}
+	.blip {
+		color:$primary-red;
+	}
 }

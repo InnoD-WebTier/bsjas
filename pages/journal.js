@@ -132,17 +132,17 @@ class Journal extends React.Component {
       });
     }
 
-    const tabs = () => {
+    const navTabs = () => {
       let tabs = [{title: 'Spring 2015'}, {title: 'Spring 2014'}, {title: 'Spring 2013'}, {title: 'Spring 2012'}, {title: 'Fall 2010'}];
       const HTMLify = function (item, i) {
         return (
-			<div
-			  key={i}
-			  onClick={() => handleClick(i)}
-			  className = "tab"
-			>
-			  {item.title}
-			</div>
+		  <div
+			key={i}
+			onClick={() => handleClick(i)}
+			className = "tab"
+		  >
+			{item.title}
+		  </div>
         );
       }
       return (
@@ -176,8 +176,9 @@ class Journal extends React.Component {
 		  
 		  	<img className="cover-img" src={data.cover} />
 
-		  
+		  <div className="at-container">
 		  {data.content.map(content)}
+		  </div>
 		</div>
       );
     }
@@ -188,13 +189,13 @@ class Journal extends React.Component {
           title={config.siteTitle}
         />
 		
-		<div className="content-header">
-          <span>Journal / </span>
-          <span className="subheader">Recent Publications</span>
-        </div>
-		
 		<div className="journals">
-		  {tabs()}
+		  <div className="content-header">
+            <span>Journal / </span>
+            <span className="subheader">Recent Publications</span>
+          </div>
+		  
+		  {navTabs()}
 		  {tabContent()}
 		</div>
 		
@@ -229,11 +230,15 @@ class Journal extends React.Component {
 			What is the submission process?
 		  </div>
 		  <div className="answer">
-			The applicant first submits a publication for selection under the review of the Journal Committee.<br/><br/>
-			
-If selected, the Journal Committee will correspond with the student to involve a Berkeley faculty member, who provides support to the student in the editing process by providing comments and additional feedback for final publication.<br/><br/>
-
-Your submission(s) must be completed for publication by the deadline set by the Journal Committee. The student will be notified of the opportunity to participate in a research symposium hosted by Berkeley Student Journal for Asian Studies.
+		    <p>
+			  The applicant first submits a publication for selection under the review of the Journal Committee.
+		    </p>
+			<p>
+			  If selected, the Journal Committee will correspond with the student to involve a Berkeley faculty member, who provides support to the student in the editing process by providing comments and additional feedback for final publication.
+			</p>
+			<p>	
+			  Your submission(s) must be completed for publication by the deadline set by the Journal Committee. The student will be notified of the opportunity to participate in a research symposium hosted by Berkeley Student Journal for Asian Studies.
+			</p>
 		  </div>
 
 		  <div className="question">
@@ -247,29 +252,39 @@ Your submission(s) must be completed for publication by the deadline set by the 
 			Is there a specific format for submission?
 		  </div>
 		  <div className="answer">
-			Please submit documents in pdf format (for images, submit in TIFF, PNG, or JPEG format) to <span className="blip">berkeleysjas@gmail.com</span>. Title the file YourName.pdf. Submissions must include a cover page with the author’s name, discipline, year in school, and formatted with one-inch margins, single-spaced, and Times New Roman 12 point font. Manuscripts must be from 1750-7500 words, and must include a 250 word abstract at the beginning of the document.<br/><br/>
-			
-Article manuscripts must adhere to the Chicago Manual of Style. This means that submissions must have footnote citations and a works cited page.<br/><br/>
-
-Email all submissions to <span className="blip">berkeleysjas@gmail.com</span>. The subject line should say “BSJAS Entry: Paper Title”. The body of the email must include the following<br/>
-
-Author’s Full name
-Year (or date of graduation if recently matriculated)
-Major or Area of Study
-Title of Paper
+		    <p>
+			  Please submit documents in pdf format (for images, submit in TIFF, PNG, or JPEG format) to <span className="blip">berkeleysjas@gmail.com</span>. Title the file YourName.pdf. Submissions must include a cover page with the author’s name, discipline, year in school, and formatted with one-inch margins, single-spaced, and Times New Roman 12 point font. Manuscripts must be from 1750-7500 words, and must include a 250 word abstract at the beginning of the document.
+			</p>
+			<p>
+			  Article manuscripts must adhere to the Chicago Manual of Style. This means that submissions must have footnote citations and a works cited page.
+			</p>
+			<p>
+			  Email all submissions to <span className="blip">berkeleysjas@gmail.com</span>. The subject line should say “BSJAS Entry: Paper Title”. The body of the email must include the following</p>
+			<ul>
+			  <li>Author’s Full name</li>
+			  <li>Year (or date of graduation if recently matriculated)</li>
+			  <li>Major or Area of Study</li>
+			  <li>Title of Paper</li>
+			</ul>
 		  </div>
 
 		  <div className="question">
 			What determines selection and publication?
 		  </div>
 		  <div className="answer">
-			Each piece of work is evaluated by the following criteria:<br/>
-Originality of work
-Assertion of a clear and significant argument
-Quality of the evidence provided to support claims
-Organization of ideas in guiding readers’ understanding
-Grammar, syntax, spelling
-Moreover, while the Journal Committee chooses to evaluate each submission based on several criteria, we also approach and evaluate each entry holistically (particularly for creative works).
+		    <p>
+			  Each piece of work is evaluated by the following criteria:
+			</p>
+			<ul>
+			  <li>Originality of work</li>
+			  <li>Assertion of a clear and significant argument</li>
+			  <li>Quality of the evidence provided to support claims</li>
+			  <li>Organization of ideas in guiding readers’ understanding</li>
+			  <li>Grammar, syntax, spelling</li>
+			</ul>
+			<p>
+			  Moreover, while the Journal Committee chooses to evaluate each submission based on several criteria, we also approach and evaluate each entry holistically (particularly for creative works).
+			</p>
 		  </div>
 
 		  <div className="question">
@@ -283,8 +298,12 @@ Moreover, while the Journal Committee chooses to evaluate each submission based 
 			What if I miss the deadline for submission?
 		  </div>
 		  <div className="answer">
-			Students are encouraged to submit papers at any time up the deadline. However, if you miss our hard deadline (January 16, 2016 at 11:59 pm), then you will not be eligible for publication in this year’s edition of the journal. However, you may still be eligible for publication the following year.<br/><br/>
-If you are unsure of the deadline please email us at <span className="blip">berkeleysjas@gmail.com</span> and we will inform you.
+		    <p>
+			  Students are encouraged to submit papers at any time up the deadline. However, if you miss our hard deadline (January 16, 2016 at 11:59 pm), then you will not be eligible for publication in this year’s edition of the journal. However, you may still be eligible for publication the following year.
+			</p>
+			<p>
+			  If you are unsure of the deadline please email us at <span className="blip">berkeleysjas@gmail.com</span> and we will inform you.
+			</p>
 		  </div>
 
 		  <div className="question">
@@ -315,7 +334,6 @@ If you are unsure of the deadline please email us at <span className="blip">berk
 			The Berkeley Student Journal of Asian Studies publishes once a year in the spring.
 		  </div>
 		</div>
-		
 	  </div>
     );
   }
