@@ -1,53 +1,50 @@
 .journals {
-	display: -webkit-flex;
-    display: flex;
-	background-color:rgba(207,235,247,1.00);
+	margin-top:30px;
 }
 .tab-nav {
-	width:150px;
+	width:15%;
+	float:left;
+	margin-top:40px;
 }
 .tab {
 	padding:10px;
 	cursor:pointer;
-	background-color: $primary-red;
-	color:#FFF;
 	font-weight:bold;
 }
 .tab:hover {
-	background-color:pink;
+	background-color:$primary-red;
+	color:#FFF;
 }
 .tab-content {
-	width:800px;
-	display:none;
-}
-.active {
-	display:inline;
-}
-.tab-text {
-	width:400px;
+	width:85%;
 	float:right;
-	display:inline-block;
 }
 .tab-title {
 	color:$primary-grey;
 	text-transform:uppercase;
 	text-align:center;
-	font-size:1em;
+	font-size:1.1em;
 	letter-spacing:.1em;
 }
+.cover-img {
+	width:30%;
+	float:left;
+	padding:20px;
+}
 .author {
-	color:$primary-grey;
 	text-align:right;
 	text-transform:uppercase;
+	padding-bottom:5px;
 }
 .title {
 	margin-bottom:10px;
 	text-align:right;
 	font-size:.9em;
+	padding-bottom:10px;
 }
 
 .submit {
-	margin:80px 0px;
+	margin-top:520px;
 }
 .question {
 	margin-bottom:10px;
