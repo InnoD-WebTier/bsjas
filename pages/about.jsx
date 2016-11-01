@@ -6,8 +6,13 @@ import { config } from 'config';
 // import data
 import data from '../data';
 
+<<<<<<< 4bd5905068cfe369b79e4dfee49de99bf14be9f0
 // TODO: move this to external source
 let k_desc_p1 = "The Berkeley Student Journal of Asian Studies (BSJAS) is an Institute of East Asian Studies sponsored journal that strives to showcase the best undergraduate and graduate work at Berkeley related to Asia.";
+=======
+// constants
+const PATH_ASSETS = '../assets/';
+>>>>>>> code cleanup
 
 let k_desc_p2 = "We publish an annual academic journal in the Spring, a weekly blog, a bi-weekly podcast series and also host on campus events related to Asia as well as our annual symposium in the Spring.";
 
@@ -22,8 +27,20 @@ let k_desc_p2 = "We publish an annual academic journal in the Spring, a weekly b
  */
 class Profile extends React.Component
 {    
+    static type = {
+        officers: 'officers',
+        bloggers: 'bloggers',
+    }
+    
     render()
     {
+<<<<<<< 4bd5905068cfe369b79e4dfee49de99bf14be9f0
+=======
+        let style = {
+            backgroundImage: 'url("' + PATH_ASSETS + this.props.name + '.jpg")'
+        };
+        
+>>>>>>> code cleanup
         return (
         <div className='profile'>
             <p className='profile-img'>{this.props.imgURL}</p>
@@ -37,11 +54,8 @@ class Profile extends React.Component
 
 /**
  * About component defines the entire section for the page.
- * Includes description and officers list/grid sections.
- *
- * Component doesn't hold any props.
- * The club description and list of officers should be
- * parsed from an external source, instead of being hard-coded into this file.
+ * Includes description and officers + blog writers profile grids sections.
+ * All data is loaded from an external json from definined data.js 
  */
 class About extends React.Component
 {
@@ -58,7 +72,11 @@ class About extends React.Component
     }
     
     // Get list of officer profiles.
+<<<<<<< 4bd5905068cfe369b79e4dfee49de99bf14be9f0
     getProfiles()
+=======
+    getProfiles(type = Profile.type.officers)
+>>>>>>> code cleanup
     {
         var officer_data = data.officers;
         
@@ -95,10 +113,31 @@ class About extends React.Component
             </section>    
             
             <section className='officers fluid-width'>
+<<<<<<< 4bd5905068cfe369b79e4dfee49de99bf14be9f0
                 <h3 className='header'>Officers</h3>
 
                 <ul className='profile-grid'>
                     {this.getProfiles()}
+=======
+                <h3 className='content-header'>
+                    <span>About / </span>
+                    <span className="subheader">Officers</span>
+                </h3>
+
+                <ul className='profile-grid'>
+                    {this.getProfiles(Profile.type.officers)}
+                </ul>
+            </section>
+                
+            <section className='bloggers fluid-width'>
+                <h3 className='content-header'>
+                    <span>About / </span>
+                    <span className="subheader">Blog Writers</span>
+                </h3>
+
+                <ul className='profile-grid'>
+                    {this.getProfiles(Profile.type.bloggers)}
+>>>>>>> code cleanup
                 </ul>
             </section>
         </div>
