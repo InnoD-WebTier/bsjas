@@ -2,13 +2,11 @@
     margin: 0px;
     padding: 0px;
     
+    color: $off-black;
     font-family: $font-body;
 }
 
 .content {
-  font-family: $font-body;
-  color: $off-black;
-  
   margin: 0px auto;
     
   // Responsive UI breakpoints at 300px intervals upto 1200px.
@@ -21,7 +19,6 @@
 }
 
 .content-header {
-  font-family: $font-body;
   font-size: 1.2rem;
   text-align: center;
   color: $primary-grey;
