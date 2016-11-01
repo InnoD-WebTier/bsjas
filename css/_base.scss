@@ -1,28 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    font-family: $font-body;
+}
+
 .content {
-  font-family: $font-body;
   color: $off-black;
-  margin: 4rem 15rem 4rem 15rem;
+  margin: 0px auto;
+
+  // Responsive UI breakpoints at 300px intervals upto 1200px.
+  @for $i from 1 through 4
+  {
+    @media screen and (min-width: $i * $width-increments) {
+      width: $i * $profile-width;
+    }
+  }
 }
 
 .content-header {
-  font-family: $font-body;
   font-size: 1.2rem;
   text-align: center;
   color: $primary-grey;
   text-transform: uppercase;
-  margin: 25px 0px 25px 0px;
+
+  width: 50%;
+  min-width: 200px;
+  margin: 25px auto;
+  border-bottom: 1px solid $primary-grey;
+
   padding-bottom: 10px;
   position: relative;
   z-index : 1;
-  &:before {
-    content: "";
-    position: absolute;
-    left: 25%;
-    bottom: 0;
-    width: 50%;
-    border-bottom: 1px solid $primary-grey;
-  }
+
   .subheader {
+    display: inline-block;
     color: black;
   }
 }
