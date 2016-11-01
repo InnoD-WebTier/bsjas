@@ -6,6 +6,8 @@ import { config } from 'config';
 // import data
 import data from '../data';
 
+// constants
+const PATH_ASSETS = '../assets/';
 
 
 /**
@@ -19,12 +21,16 @@ import data from '../data';
  */
 class Profile extends React.Component
 {    
+    static type = {
+        officers: 'officers',
+        bloggers: 'bloggers',
+    }
+    
     render()
     {
-        var style = {
-            backgroundImage: 'url("../assets/' + this.props.name + '.jpg")'
+        let style = {
+            backgroundImage: 'url("' + PATH_ASSETS + this.props.name + '.jpg")'
         };
-        console.log(style.backgroundImage);
         
         return (
         <div className='profile'>
@@ -39,11 +45,8 @@ class Profile extends React.Component
 
 /**
  * About component defines the entire section for the page.
- * Includes description and officers list/grid sections.
- *
- * Component doesn't hold any props.
- * The club description and list of officers should be
- * parsed from an external source, instead of being hard-coded into this file.
+ * Includes description and officers + blog writers profile grids sections.
+ * All data is loaded from an external json from definined data.js 
  */
 class About extends React.Component
 {
@@ -60,7 +63,7 @@ class About extends React.Component
     }
     
     // Get list of officer profiles.
-    getProfiles(type = 'officers')
+    getProfiles(type = Profile.type.officers)
     {
         var people = data[type];
         
@@ -105,7 +108,7 @@ class About extends React.Component
                 </h3>
 
                 <ul className='profile-grid'>
-                    {this.getProfiles('officers')}
+                    {this.getProfiles(Profile.type.officers)}
                 </ul>
             </section>
                 
@@ -116,7 +119,7 @@ class About extends React.Component
                 </h3>
 
                 <ul className='profile-grid'>
-                    {this.getProfiles('bloggers')}
+                    {this.getProfiles(Profile.type.bloggers)}
                 </ul>
             </section>
         </div>

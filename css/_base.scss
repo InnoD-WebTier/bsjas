@@ -12,7 +12,7 @@
   // Responsive UI breakpoints at 300px intervals upto 1200px.
   @for $i from 1 through 4
   {
-    @media screen and (min-width: $i * $profile-width) {
+    @media screen and (min-width: $i * $width-increments) {
       width: $i * $profile-width;
     }   
   }
