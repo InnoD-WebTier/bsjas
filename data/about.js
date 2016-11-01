@@ -35,43 +35,43 @@ export default
 		},
 	],
 
-    // Blog writers
-    "bloggers": [
-        {
+	// Blog writers
+	"bloggers": [
+		{
 			"name": "Shounak Chattopadhyay",
 			"text": "South Asia",
 		},
-        {
+		{
 			"name": "Ariana Pemberton",
 			"text": "South Asia",
 		},
-        {
+		{
 			"name": "Kevin Fulgham",
 			"text": "Southeast Asia",
 		},
-        {
+		{
 			"name": "Kristy Drutman",
 			"text": "SouthEast Asia",
 		},
-        {
+		{
 			"name": "Wantakan Arcardo",
 			"text": "Southeast Asia",
 		},
-        {
+		{
 			"name": "Dianne Chung",
 			"text": "Northeast Asia",
 		},
-        {
+		{
 			"name": "William Chu",
 			"text": "Northeast Asia",
 		},
-        {
+		{
 			"name": "Eric Yui",
 			"text": "Northeast Asia",
 		},
-        {
+		{
 			"name": "Nursultan Mussinov",
 			"text": "Central Asia",
 		},
-    ],
+	],
 }
