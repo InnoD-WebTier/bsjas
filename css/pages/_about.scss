@@ -6,17 +6,6 @@ ul, ol {
     list-style: none;
 }
 
-.fluid-width {
-    margin: 0px auto;
-
-    @for $i from 1 through 4
-    {
-        @media screen and (min-width: $i * $profile-width) {
-            width: $i * $profile-width;
-        }
-    }
-}
-
 .section-title {
     color: $primary-grey;
     font-size: 2rem;
@@ -44,7 +33,7 @@ ul, ol {
   }
 }
 
-/* --- OFFICER LIST --- */
+/* --- PROFILE GRID --- */
 
 .profile-grid {
     display: flex;
@@ -71,11 +60,13 @@ ul, ol {
     * { margin: 8px 0px; }
 
     .profile-img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
         width: $img-size;
         height: $img-size;
         border-radius: ($img-size / 2);
-
-        // TODO: Remove this once profile images are filled.
         background-color: lightgray;
     }
 }
