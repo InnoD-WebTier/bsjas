@@ -18,7 +18,8 @@ class Events extends React.Component {
           <img src="http://i.imgur.com/RRtDu9K.jpg" />
           <div className="desc">Spring 2015 Symposium</div>
         </div>
-
+        {/* For upcoming events, it would be best to remove this repetitive structure with
+            a map function -- provided we have the data for upcoming events arleady*/}
         <div className="events-upcoming">
           <div className="content-header">
             <span>Events / </span>
@@ -32,25 +33,28 @@ class Events extends React.Component {
                 Event Title
               </div>
               <div className="desc info">
-                Mulford Hall<br />October 28th, 2016
+                <div>Mulford Hall</div>
+                <div>October 28th, 2016</div>
               </div>
             </div>
             <div className="subevent">
               <img src="http://imgur.com/7riDg3P.jpg" />
               <div className="desc title">
-                BSJAS Event<br />
+                BSJAS Event
               </div>
               <div className="desc info">
-                Evans Hall<br />November 4th, 2016
+                <div>Evans Hall</div>
+                <div>November 4th, 2016</div>
               </div>
             </div>
             <div className="subevent">
               <img src="http://imgur.com/4a4WA2s.jpg" />
               <div className="desc title">
-                2017 Symposium<br />
+                2017 Symposium
               </div>
               <div className="desc info">
-                MLK Student Union<br />February 2nd, 2017
+                <div>MLK Student Union</div>
+                <div>February 2nd, 2017</div>
               </div>
             </div>
           </div>
@@ -62,7 +66,8 @@ class Events extends React.Component {
                 Event Event
               </div>
               <div className="desc info">
-                Dwinelle Hall<br />March 8th, 2017
+                <div>Dwinelle Hall</div>
+                <div>March 8th, 2017</div>
               </div>
             </div>
             <div className="subevent">
@@ -71,7 +76,8 @@ class Events extends React.Component {
                 Summer Symposium
               </div>
               <div className="desc info">
-                VLSB<br />June 6th, 2017
+                <div>VLSB</div>
+                <div>June 6th, 2017</div>
               </div>
             </div>
             <div className="subevent">
@@ -80,7 +86,8 @@ class Events extends React.Component {
                 2018 Symposium
               </div>
               <div className="desc info">
-                Cory Hall<br />April 3rd, 2018
+                <div>Cory Hall</div>
+                <div>April 3rd, 2018</div>
               </div>
             </div>
           </div>

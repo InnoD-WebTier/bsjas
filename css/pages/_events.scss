@@ -32,7 +32,9 @@
 // % is better at fixing this than fixed px values
 .subevent {
   display: inline-block;
-  width: 33%;
+  width: 30%;
+  margin-left: 1%;
+  margin-right: 1%;
   .desc {
     text-align: center;
   }
