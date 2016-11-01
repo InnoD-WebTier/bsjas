@@ -3,6 +3,9 @@ import Helmet from 'react-helmet';
 import ReactDOM from 'react-dom';
 import { config } from 'config';
 
+// import data
+import data from '../data';
+
 // TODO: move this to external source
 let k_desc_p1 = "The Berkeley Student Journal of Asian Studies (BSJAS) is an Institute of East Asian Studies sponsored journal that strives to showcase the best undergraduate and graduate work at Berkeley related to Asia.";
 
@@ -42,19 +45,41 @@ class Profile extends React.Component
  */
 class About extends React.Component
 {
+    // Get list of description texts.
+    getDescription()
+    {
+        let desc_data = data.description;
+        
+        var p_list = [];
+        for (var i = 0; i < desc_data.length; i++)
+            p_list.push( <p>{desc_data[i]}</p> );
+        
+        return p_list;
+    }
+    
+    // Get list of officer profiles.
     getProfiles()
     {
-        var profiles = [];
-        for (var i = 0; i < 10; i++)
+        var officer_data = data.officers;
+        
+        var officer_list = [];
+        for (var i = 0; i < officer_data.length; i++)
         {
-            profiles.push(
+            let officer = officer_data[i];
+            
+            officer_list.push(
                 <li key={'profile-' + i} className='profile-item'>    
-                    <Profile imgURL={null} name='First Last' position='Editor-in-Chief' additional={null} />
+                    <Profile 
+                        imgURL={null} 
+                        name={officer.name} 
+                        position='Editor-in-Chief' 
+                        additional={null} 
+                    />
                 </li>
             );
         }
         
-        return profiles;
+        return officer_list;
     }
     
     render()
@@ -66,8 +91,7 @@ class About extends React.Component
             <section className='desc fluid-width'>
                 <h3 className='header'>Who are we?</h3>
                 
-                <p>{k_desc_p1}</p>
-                <p>{k_desc_p2}</p>
+                {this.getDescription()}
             </section>    
             
             <section className='officers fluid-width'>
