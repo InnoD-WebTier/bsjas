@@ -4,6 +4,7 @@ export default
       	{
 		"title": 'BSJAS Fifth Edition',
         	"year": 'Spring 2015',
+        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/BSJAS-2015-Final-Int.pdf',
 		"cover": '/assets/2015cover.png',
         	"content": [
 			  {
@@ -29,6 +30,7 @@ export default
       	}, {
 		"title": 'BSJAS Fourth Edition',
         	"year": 'Spring 2014',
+        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/2014-BSJAS-Int.pdf',
 		"cover": '/assets/2014cover.png',
         	"content": [
 			  {
@@ -51,6 +53,7 @@ export default
      	 }, {
 		"title": 'BSJAS Third Edition',
         	"year": 'Spring 2013',
+        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v3_2013_Spring.pdf',
 		"cover": '/assets/2013cover.png',
         	"content": [
 			  {
@@ -76,6 +79,7 @@ export default
       	}, {
 		"title": 'BSJAS Second Edition',
         	"year": 'Spring 2012',
+        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v2_2012_Spring.pdf',
 		"cover": '/assets/2012cover.png',
         	"content": [
 			  {
@@ -95,6 +99,7 @@ export default
       	}, {
 		"title": 'BSJAS Inaugural Edition',
         	"year": 'Fall 2010',
+        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v1_2010_Fall.pdf',
 		"cover": '/assets/2010cover.png',
         	"content": [
 			  {

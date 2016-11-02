@@ -61,7 +61,9 @@ class Journal extends React.Component {
 	    {data.title}
 	  </div>
 
-	  <img className="cover-img" src={data.cover} />
+    <a href={data.link} target="_blank">
+      <img className="cover-img" src={data.cover} />
+    </a>
 
 	  <div className="at-container">
 	    {data.content.map(journalContent)}
