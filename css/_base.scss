@@ -1,13 +1,16 @@
 * {
     margin: 0px;
     padding: 0px;
-
     font-family: $font-body;
+}
+
+.headroom {
+  z-index: 2 !important;
 }
 
 .content {
   color: $off-black;
-  margin: 0px auto;
+  margin: 3.5rem auto;
 
   // Responsive UI breakpoints at 300px intervals upto 1200px.
   @for $i from 1 through 4

@@ -1,125 +1,125 @@
 export default
 {
 	"journals": [
-      	{
-		"title": 'BSJAS Fifth Edition',
-        	"year": 'Spring 2015',
-        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/BSJAS-2015-Final-Int.pdf',
-		"cover": '/assets/2015cover.png',
-        	"content": [
-			  {
-				  "author": "Vidhatha Reddy",
-				  "title": "Family Patriarchs as Tragic Figures in the Mahabharata and Ramayana"
-			  }, {
-				  "author": "Jinoh (Kahn) Ryu",
-				  "title": "Transnational Feminist Approaches to Languages and Identities of East Asian \"Third Culture Kids\" at UC Berkeley"
-			  }, {
-				  "author": "Grayson Dimick",
-				  "title": "Seeking Partnership: The Development of Human Rights in Cambodia since 1993"
-			  }, {
-				  "author": "Ari Shusterman",
-				  "title": "The State of Interethnic Relations in Post-Soviet Central Asia: A Cultural, Historical, and Political Perspective"
-			  }, {
-				  "author": "Malayandi Palaniappan",
-				  "title": "The Friendship of Karna and Duryodhana in the Mahabharata"
-			  }, {
-				  "author": "Veena Bhatia",
-				  "title": "The Ethicality of Chinese Investment in the Democratic Republic of the Congo: The Realist and Cosmopolitan Perspective"
-			  }
-		  ]
-      	}, {
-		"title": 'BSJAS Fourth Edition',
-        	"year": 'Spring 2014',
-        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/2014-BSJAS-Int.pdf',
-		"cover": '/assets/2014cover.png',
-        	"content": [
-			  {
-				  "author": "Marisa Mito",
-				  "title": "Defiant Wives: Reading Transgressive Marriage in the Hindu Tradition"
-			  }, {
-				  "author": "Maya Agarwal",
-				  "title": "Two Versions of the Ramayana and the Concept of the Lokasamgraha"
-			  }, {
-				  "author": "Pisacha Wichianchan",
-				  "title": "The Damned Politics of Sarawak: Rethinking the Bakun Megaproject in Malaysia"
-			  }, {
-				  "author": "Hoo Ri Kim",
-				  "title": "An Assessment of the Conflict Management Tools of the Korean Conflict"
-			  }, {
-				  "author": "Yuma Kuwata",
-				  "title": "Policy Recommendation for the U.S. Government in Reaction to Japan's Possible Nuclear Energy Policy Reformation"
-			  }
-		  ]
-     	 }, {
-		"title": 'BSJAS Third Edition',
-        	"year": 'Spring 2013',
-        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v3_2013_Spring.pdf',
-		"cover": '/assets/2013cover.png',
-        	"content": [
-			  {
-				  "author": "Kankan Xie",
-				  "title": "How Does Ethnicity Affect Current China-Malaysia Relations?"
-			  }, {
-				  "author": "Mark Portillo",
-				  "title": "Constructing \"Culture\""
-			  }, {
-				  "author": "Rachel Phoa",
-				  "title": "The Success of Environmental NGOs in Suharto's Indonesia"
-			  }, {
-				  "author": "Ramanathan Veerappan",
-				  "title": "The Relevance of Kautilya's Arthashastra"
-			  }, {
-				  "author": "Valerie Black",
-				  "title": "Ainu and the Metaphors of Indigeneity: Land, History, Science, Law and Bodies"
-			  }, {
-				  "author": "Robert Bowers Curl",
-				  "title": "Not so Singular: Laicization in Japanese Buddhism and Parallels in South Asia"
-			  }
-		  ]
-      	}, {
-		"title": 'BSJAS Second Edition',
-        	"year": 'Spring 2012',
-        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v2_2012_Spring.pdf',
-		"cover": '/assets/2012cover.png',
-        	"content": [
-			  {
-				  "author": "Dawei Ding",
-				  "title": "A Sociopolitical and Economic Analysis of Recent Shanghai Policies on Hukou and Migrant Worker Insurance"
-			  }, {
-				  "author": "Tara Yarlagadda",
-				  "title": "An Analysis of State-based Narratives in Pakistani and Indian Textbooks"
-			  }, {
-				  "author": "Muyang Chen",
-				  "title": "The Current Buraku Issue in Tokyo and Its Solutions"
-			  }, {
-				  "author": "Benjamin Knight",
-				  "title": "Deconstructing Japan's Military Globalism: The March to \"Normal\" Nationhood"
-			  }
-		  ]
-      	}, {
-		"title": 'BSJAS Inaugural Edition',
-        	"year": 'Fall 2010',
-        	"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v1_2010_Fall.pdf',
-		"cover": '/assets/2010cover.png',
-        	"content": [
-			  {
-				  "author": "James Lin",
-				  "title": "Soviet Internationalism, Chinese Nationalism, and Early Kuomintang Struggles"
-			  }, {
-				  "author": "Alessandro Tiberio",
-				  "title": "Becoming Taiwanese"
-			  }, {
-				  "author": "Andrea Horbinski",
-				  "title": "The Tokyo Tribunal"
-			  }, {
-				  "author": "Nina Tompkin",
-				  "title": "Professor Interview featuring Lanchih Po"
-			  }
-		  ]
-      },
-	  
-    ],
-	
+		{
+			"title": 'BSJAS Fifth Edition',
+			"year": 'Spring 2015',
+			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/BSJAS-2015-Final-Int.pdf',
+			"cover": '/assets/2015cover.png',
+			"content": [
+		  {
+			  "author": "Vidhatha Reddy",
+			  "title": "Family Patriarchs as Tragic Figures in the Mahabharata and Ramayana"
+		  }, {
+			  "author": "Jinoh (Kahn) Ryu",
+			  "title": "Transnational Feminist Approaches to Languages and Identities of East Asian \"Third Culture Kids\" at UC Berkeley"
+		  }, {
+			  "author": "Grayson Dimick",
+			  "title": "Seeking Partnership: The Development of Human Rights in Cambodia since 1993"
+		  }, {
+			  "author": "Ari Shusterman",
+			  "title": "The State of Interethnic Relations in Post-Soviet Central Asia: A Cultural, Historical, and Political Perspective"
+		  }, {
+			  "author": "Malayandi Palaniappan",
+			  "title": "The Friendship of Karna and Duryodhana in the Mahabharata"
+		  }, {
+			  "author": "Veena Bhatia",
+			  "title": "The Ethicality of Chinese Investment in the Democratic Republic of the Congo: The Realist and Cosmopolitan Perspective"
+		  }
+			]
+		},
+		{
+			"title": 'BSJAS Fourth Edition',
+			"year": 'Spring 2014',
+			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/2014-BSJAS-Int.pdf',
+			"cover": '/assets/2014cover.png',
+			"content": [
+		  {
+			  "author": "Marisa Mito",
+			  "title": "Defiant Wives: Reading Transgressive Marriage in the Hindu Tradition"
+		  }, {
+			  "author": "Maya Agarwal",
+			  "title": "Two Versions of the Ramayana and the Concept of the Lokasamgraha"
+		  }, {
+			  "author": "Pisacha Wichianchan",
+			  "title": "The Damned Politics of Sarawak: Rethinking the Bakun Megaproject in Malaysia"
+		  }, {
+			  "author": "Hoo Ri Kim",
+			  "title": "An Assessment of the Conflict Management Tools of the Korean Conflict"
+		  }, {
+			  "author": "Yuma Kuwata",
+			  "title": "Policy Recommendation for the U.S. Government in Reaction to Japan's Possible Nuclear Energy Policy Reformation"
+		  }
+			]
+		 }, {
+		 "title": 'BSJAS Third Edition',
+			"year": 'Spring 2013',
+			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v3_2013_Spring.pdf',
+			"cover": '/assets/2013cover.png',
+			"content": [
+		  {
+			  "author": "Kankan Xie",
+			  "title": "How Does Ethnicity Affect Current China-Malaysia Relations?"
+		  }, {
+			  "author": "Mark Portillo",
+			  "title": "Constructing \"Culture\""
+		  }, {
+			  "author": "Rachel Phoa",
+			  "title": "The Success of Environmental NGOs in Suharto's Indonesia"
+		  }, {
+			  "author": "Ramanathan Veerappan",
+			  "title": "The Relevance of Kautilya's Arthashastra"
+		  }, {
+			  "author": "Valerie Black",
+			  "title": "Ainu and the Metaphors of Indigeneity: Land, History, Science, Law and Bodies"
+		  }, {
+			  "author": "Robert Bowers Curl",
+			  "title": "Not so Singular: Laicization in Japanese Buddhism and Parallels in South Asia"
+		  }
+			]
+		}, {
+			"title": 'BSJAS Second Edition',
+			"year": 'Spring 2012',
+			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v2_2012_Spring.pdf',
+			"cover": '/assets/2012cover.png',
+			"content": [
+		  {
+			  "author": "Dawei Ding",
+			  "title": "A Sociopolitical and Economic Analysis of Recent Shanghai Policies on Hukou and Migrant Worker Insurance"
+		  }, {
+			  "author": "Tara Yarlagadda",
+			  "title": "An Analysis of State-based Narratives in Pakistani and Indian Textbooks"
+		  }, {
+			  "author": "Muyang Chen",
+			  "title": "The Current Buraku Issue in Tokyo and Its Solutions"
+		  }, {
+			  "author": "Benjamin Knight",
+			  "title": "Deconstructing Japan's Military Globalism: The March to \"Normal\" Nationhood"
+		  }
+			]
+		}, {
+			"title": 'BSJAS Inaugural Edition',
+			"year": 'Fall 2010',
+			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v1_2010_Fall.pdf',
+			"cover": '/assets/2010cover.png',
+			"content": [
+		  {
+			  "author": "James Lin",
+			  "title": "Soviet Internationalism, Chinese Nationalism, and Early Kuomintang Struggles"
+		  }, {
+			  "author": "Alessandro Tiberio",
+			  "title": "Becoming Taiwanese"
+		  }, {
+			  "author": "Andrea Horbinski",
+			  "title": "The Tokyo Tribunal"
+		  }, {
+			  "author": "Nina Tompkin",
+			  "title": "Professor Interview featuring Lanchih Po"
+		  }
+			]
+		},
+	],
+
 	"submit": [
 	  {
 		  "question": "What is the Berkeley Student Journal of Asian Studies?",
@@ -160,7 +160,7 @@ export default
 	  }, {
 		  "question": "How often does the journal get published?",
 		  "answer": "The Berkeley Student Journal of Asian Studies publishes once a year in the spring."
-	  }, 
-	
+	  },
+
 	]
 }

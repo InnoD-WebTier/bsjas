@@ -1,40 +1,44 @@
-@mixin centerer {
+@mixin vertical-center {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
+
 a {
 	text-decoration: none;
 }
+
 .logo {
 	height: 60px;
 	float: left;
 	padding-right: 15px;
 }
+
 .nav-links {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
+	right: 1rem;
+  bottom: 0rem;
+  height: 2.55rem;
 	.nav-item {
 	  font-family: $font-body;
 	  color: $off-white;
-	  padding-left: 20px;
-	  float: right;
-
+	  padding: 0.75rem 1rem;
 	}
 }
-.nav_content {
+
+.nav-content {
 	position: relative;
 	background-color: $primary-red;
 	padding: 20px;
 	overflow: hidden;
 }
-.club_title {
+
+.club-title {
 	font-family: $font-header;
 	font-size: 25px;
   	color: $off-white;
   	letter-spacing: 1.1px;
-  	@include centerer;
+  	@include vertical-center;
   	span {
   		display: block;
   	}
@@ -46,7 +50,7 @@ a {
     text-decoration: none;
     width: 30px;
     height: 26px;
-    @include centerer;
+    @include vertical-center;
     visibility: hidden;
     right: 20px;
     .menu-icon {

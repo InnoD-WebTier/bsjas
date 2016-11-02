@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { config } from 'config';
 
 // import data
-import data from '../data/about';
+import data from './data/about';
 
 // constants
 const PATH_ASSETS = '../assets/';

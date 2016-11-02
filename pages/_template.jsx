@@ -7,14 +7,13 @@ import '../css/main'
 
 class MyLink extends React.Component {
   render () {
-    return(
+    return (
       <div className={"MyLink-"+this.props.name}>
         <Link to={prefixLink('/' + this.props.name + '/')}>
           {this.props.name}
         </Link>
       </div>
-    ) 
-    
+    );
   }
 }
 
@@ -33,9 +32,9 @@ class Template extends React.Component {
     return (
       <div>
         <Headroom>
-        <div className = "nav_content">
-          <img className="logo" src="assets/temp_logo.png"/>
-          <span className = "club_title">
+        <div className = "nav-content">
+          <img className="logo" src="/assets/temp_logo.png"/>
+          <span className = "club-title">
             Berkeley Student
             <span>
               Journal of Asian Studies
@@ -49,7 +48,7 @@ class Template extends React.Component {
               <span className="menu-bar bar-3"></span>
             </span>
           </Link>
-          
+
           <nav className="nav-links">
             <Link
               className="nav-item"
@@ -90,8 +89,13 @@ class Template extends React.Component {
           </nav>
         </div>
         </Headroom>
+        <div
+          className="content"
+        >
+          {this.props.children}
+        </div>
       </div>
-    )
+    );
   }
 }
 
