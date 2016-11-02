@@ -1,11 +1,11 @@
 export default
 {
 	"journals": [
-      {
+      	{
 		"title": 'BSJAS Fifth Edition',
-        "year": 'Spring 2015',
+        	"year": 'Spring 2015',
 		"cover": '/assets/2015cover.png',
-        "content": [
+        	"content": [
 			  {
 				  "author": "Vidhatha Reddy",
 				  "title": "Family Patriarchs as Tragic Figures in the Mahabharata and Ramayana"
@@ -26,11 +26,11 @@ export default
 				  "title": "The Ethicality of Chinese Investment in the Democratic Republic of the Congo: The Realist and Cosmopolitan Perspective"
 			  }
 		  ]
-      }, {
+      	}, {
 		"title": 'BSJAS Fourth Edition',
-        "year": 'Spring 2014',
+        	"year": 'Spring 2014',
 		"cover": '/assets/2014cover.png',
-        "content": [
+        	"content": [
 			  {
 				  "author": "Marisa Mito",
 				  "title": "Defiant Wives: Reading Transgressive Marriage in the Hindu Tradition"
@@ -48,11 +48,11 @@ export default
 				  "title": "Policy Recommendation for the U.S. Government in Reaction to Japan's Possible Nuclear Energy Policy Reformation"
 			  }
 		  ]
-      }, {
+     	 }, {
 		"title": 'BSJAS Third Edition',
-        "year": 'Spring 2013',
+        	"year": 'Spring 2013',
 		"cover": '/assets/2013cover.png',
-        "content": [
+        	"content": [
 			  {
 				  "author": "Kankan Xie",
 				  "title": "How Does Ethnicity Affect Current China-Malaysia Relations?"
@@ -73,11 +73,11 @@ export default
 				  "title": "Not so Singular: Laicization in Japanese Buddhism and Parallels in South Asia"
 			  }
 		  ]
-      }, {
+      	}, {
 		"title": 'BSJAS Second Edition',
-        "year": 'Spring 2012',
+        	"year": 'Spring 2012',
 		"cover": '/assets/2012cover.png',
-        "content": [
+        	"content": [
 			  {
 				  "author": "Dawei Ding",
 				  "title": "A Sociopolitical and Economic Analysis of Recent Shanghai Policies on Hukou and Migrant Worker Insurance"
@@ -92,11 +92,11 @@ export default
 				  "title": "Deconstructing Japan's Military Globalism: The March to \"Normal\" Nationhood"
 			  }
 		  ]
-      }, {
+      	}, {
 		"title": 'BSJAS Inaugural Edition',
-        "year": 'Fall 2010',
+        	"year": 'Fall 2010',
 		"cover": '/assets/2010cover.png',
-        "content": [
+        	"content": [
 			  {
 				  "author": "James Lin",
 				  "title": "Soviet Internationalism, Chinese Nationalism, and Early Kuomintang Struggles"
