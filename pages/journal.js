@@ -23,11 +23,11 @@ class Journal extends React.Component {
       const nav = function (item, i) {
         return (
 	  <div
-		key={i}
-		onClick={() => handleClick(i)}
-		className = "tab"
+	    key={i}
+	    onClick={() => handleClick(i)}
+	    className = "tab"
 	  >
-		{item.year}
+	    {item.year}
 	  </div>
         );
       }
@@ -45,13 +45,13 @@ class Journal extends React.Component {
       const journalContent = function (item) {
 	return (
 	  <div>
-		<div className="author">
-		  {item.author}
-		</div>
+	    <div className="author">
+	      {item.author}
+	    </div>
 
-		<div className="title">
-		  {item.title}
-		</div>
+	    <div className="title">
+	      {item.title}
+	    </div>
 	  </div>
 	);
       }
