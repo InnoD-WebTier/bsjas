@@ -19,21 +19,21 @@ class Journal extends React.Component {
     }
 
     const navTabs = () => {
-      let tabs = [{title: 'Spring 2015'}, {title: 'Spring 2014'}, {title: 'Spring 2013'}, {title: 'Spring 2012'}, {title: 'Fall 2010'}];
-      const HTMLify = function (item, i) {
+      let tabs = info["journals"]
+      const nav = function (item, i) {
         return (
 	  <div
 		key={i}
 		onClick={() => handleClick(i)}
 		className = "tab"
 	  >
-		{item.title}
+		{item.year}
 	  </div>
         );
       }
       return (
 	<div className="tab-nav">
-	  {tabs.map(HTMLify)}
+	  {tabs.map(nav)}
 	</div>
       );
     }
