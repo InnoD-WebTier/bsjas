@@ -1,9 +1,10 @@
 .journals {
-	width:900px;
+	width:800px;
 	height:520px;
+	margin:0px auto;
 	
 	.tab-nav {
-		width:130px;
+		width:140px;
 		float:left;
 		margin-top:40px;
 		
@@ -20,7 +21,7 @@
 		
 	}
 	.tab-content {
-		width:770px;
+		width:800px;
 		
 		.tab-title {
 			color:$primary-grey;
@@ -55,6 +56,7 @@
 
 .submit {
 	width:800px;
+	margin:0px auto 80px auto;
 	
 	.question {
 		margin-bottom:10px;
@@ -63,6 +65,10 @@
 	}
 	.answer {
 		margin-bottom:30px;
+	}
+	.p {
+		height:15px;
+		display:block;
 	}
 	.blip {
 		color:$primary-red;
