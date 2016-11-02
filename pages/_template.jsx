@@ -29,6 +29,8 @@ class Template extends React.Component {
       <MyLink name={item} key={i} />
     ));
 
+    location.pathname
+
     return (
       <div>
         <Headroom>

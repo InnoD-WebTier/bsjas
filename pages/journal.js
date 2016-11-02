@@ -72,7 +72,7 @@ class Journal extends React.Component {
               {item.question}
             </div>
             <div className="answer">
-              {item.answer}
+              <div dangerouslySetInnerHTML={{ __html: item.answer }} />
             </div>
           </div>
         );
