@@ -30,6 +30,8 @@ class Template extends React.Component {
     ));
 
     location.pathname
+            console.log(this.props.route);
+
 
     return (
       <div>
@@ -92,7 +94,7 @@ class Template extends React.Component {
         </div>
         </Headroom>
         <div
-          className="content"
+          className={this.props.route.path === '/' ? "" : "content"}
         >
           {this.props.children}
         </div>
