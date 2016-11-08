@@ -1,6 +1,3 @@
-// Renamed for consistency
-// display block is the default value, try to avoid setting specific widths in px!
-// try to use rem or % instead of px
 .events-main {
   margin-top: 2rem;
   width: 80%;
@@ -15,7 +12,7 @@
   }
 }
 
-.events-upcoming {
+.events-upcoming, .events-past {
   text-align: center;
   margin-top: 2rem;
   width: 80%;
@@ -26,10 +23,6 @@
   }
 }
 
-// I gave it a slightly new look based off the client meeting
-// Using px values before (you can look on your local unless you already pulled this)
-// caused the page to distort on my comp if I dragged the window to be a little smaller
-// % is better at fixing this than fixed px values
 .subevent {
   display: inline-block;
   width: 30%;

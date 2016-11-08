@@ -1,0 +1,72 @@
+@import 'variables';
+
+$profile-width:  300px;
+
+ul, ol {
+    list-style: none;
+}
+
+.section-title {
+    color: $primary-grey;
+    font-size: 2rem;
+
+    padding: 8px 0px;
+    margin: 0px 0px 30px 0px;//50px;
+}
+
+
+/* --- DESCRIPTION --- */
+.about {
+  .desc {
+      margin-top: 40px;
+      margin-bottom: 100px;
+  }
+  .desc > p {
+      width: 75%;
+      min-width: 320px;
+      margin: 20px auto;
+
+      font-size: 1rem;
+      @media screen and (min-width: 3 * $profile-width) {
+          font-size: 1.25rem;
+      }
+  }
+}
+
+/* --- PROFILE GRID --- */
+
+.profile-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    margin-top: 40px;
+}
+
+.profile-item {
+    width: $profile-width;
+    margin-bottom: 20px;
+}
+
+.profile
+{
+    $img-size: 200px;
+
+    width: $img-size;
+    margin: 0px auto;
+
+    text-align: center;
+
+    * { margin: 8px 0px; }
+
+    .profile-img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        width: $img-size;
+        height: $img-size;
+        border-radius: ($img-size / 2);
+        background-color: lightgray;
+    }
+}
