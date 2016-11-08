@@ -32,31 +32,27 @@ class Blog extends React.Component {
         
         <ul className="most-recent-blogs">
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>Blog Title 1</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>Blog Title 1</span></span>
           </li>
 
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>Blog Title 2</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>Blog Title 2</span></span>
           </li>
 
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>Blog Title 3</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>Blog Title 3</span></span> 
           </li>
 
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>Blog Title 4</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>Blog Title 4</span></span> 
           </li>
         </ul>
         
@@ -66,31 +62,27 @@ class Blog extends React.Component {
         
         <ul className="by-region-blogs">
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>Central Asia</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>Central Asia</span></span>
           </li>
-
+        
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>East Asia</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>East Asia</span></span>
           </li>
-
+        
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>South Asia</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>South Asia</span></span>
           </li>
-
+        
           <li>
-            <a>
-              <img src="/assets/blog_recent.jpg"/>
-              <span className="tile-title"><span>Southeast Asia</span></span>
-            </a>  
+            <div className="img-container">
+            </div>
+            <span className="tile-title"><span>Southeast Asia</span></span>
           </li>
         </ul>
 
@@ -99,14 +91,16 @@ class Blog extends React.Component {
             <span className="subheader">Archive</span>
         </div>
         
-        <ul className="archives">
-            <li>October 2016</li>
-            <li>September 2016</li>
-            <li>April 2016</li>
-            <li>March 2016</li>
-            <li>December 2015</li>
-            <li>November 2015</li>
-        </ul>
+        <div className="archives-container">
+            <ul className="archives">
+                <li>October 2016</li>
+                <li>September 2016</li>
+                <li>April 2016</li>
+                <li>March 2016</li>
+                <li>December 2015</li>
+                <li>November 2015</li>
+            </ul>
+        </div>
 
     </div>
     );
