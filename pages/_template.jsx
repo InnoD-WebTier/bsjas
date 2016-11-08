@@ -18,10 +18,14 @@ class NavLink extends React.Component
         if (name && name.length > 0)
             link += name + "/";
         
+        let active = this.props.active ? ' active' : '';
+        
         return (
             <Link 
-                className='nav-link'
-                to={prefixLink(link)}>
+                to = {prefixLink(link)}
+                className = {'nav-link' + active} 
+                onClick={this.props.clickHandler}
+                >
                 {name}
             </Link>
         );
@@ -29,37 +33,41 @@ class NavLink extends React.Component
 }
 
 class Template extends React.Component
-{
+{   
     constructor(props)
     {
         super(props);
-        this.state = {showMenu: false};
-    }
-    
-    toggleMenu()
-    {
-        console.log("toggle");
-        this.setState({showMenu: !this.state.showMenu});
+        
+        // get pathname and strip all '/'
+        let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
+        this.state = {
+            page: page,
+            showMenu: false,
+        };
     }
     
     getNavLinks()
     {
-        let links = data['links'];
+        let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
         
-        var link_items = [];
-        for (var i = 0; i < links.length; i++)
-        {
-            let link = links[i];
-            link_items.push(<NavLink key={'nav-' + i} name={link} />);
-        }
-        
-        return link_items;
+        return data['links'].map(link => (
+            <NavLink 
+                name = {link}
+                key  = {'nav-' + link} 
+                active = {link === page}
+                clickHandler = {() => this.toggleMenu()}
+            />
+        ));
     }
     
-    render ()
+    toggleMenu()
     {
-        console.log(this.state.showMenu);
-        let navLinksClasses = 'nav-links' + (this.state.showMenu ? '' : ' collapse');
+        this.setState({showMenu: !this.state.showMenu});
+    }
+    
+    render()
+    {
+        let showMenu = this.state.showMenu ? ' show' : ' hide';
         
         return (
         <div>
@@ -73,15 +81,15 @@ class Template extends React.Component
                                 <p className="bot">Journal of Asian Studies</p>
                             </h1>
                         </Link>
+                        
+                        <nav className={"nav-links " + showMenu}>
+                            {this.getNavLinks()}
+                        </nav>
 
                         <img src="/assets/menu_white.png" 
                              className="menu-button"
-                             onClick={this.toggleMenu.bind(this)}
+                             onClick={() => this.toggleMenu()}
                             />
-                        
-                        <nav className={navLinksClasses}>
-                            {this.getNavLinks()}
-                        </nav>
                     </div>
                 </div>
             </Headroom>
@@ -93,13 +101,5 @@ class Template extends React.Component
         );
     }
 }
-
-//<Link className="menu-btn">
-//    <span className="menu-icon">
-//        <span className="menu-bar bar-1"></span>
-//        <span className="menu-bar bar-2"></span>
-//        <span className="menu-bar bar-3"></span>
-//    </span>
-//</Link>
 
 export default Template;
