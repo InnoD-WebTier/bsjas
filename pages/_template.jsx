@@ -90,6 +90,7 @@ class Template extends React.Component {
             </Link>
           </nav>
         </div>
+
         </Headroom>
         <div
           className="content"
