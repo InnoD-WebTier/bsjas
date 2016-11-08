@@ -5,100 +5,88 @@ import Headroom from 'react-headroom'
 import '../css/markdown-styles'
 import '../css/main'
 
-class MyLink extends React.Component {
-  render () {
-    return (
-      <div className={"MyLink-"+this.props.name}>
-        <Link to={prefixLink('/' + this.props.name + '/')}>
-          {this.props.name}
-        </Link>
-      </div>
-    );
-  }
+// import data
+import data from './data/nav.js';
+
+class NavLink extends React.Component
+{
+    render()
+    {
+        let name = this.props.name;
+        let link = "/";
+        if (name && name.length > 0)
+            link += name + "/";
+        
+        return (
+            <Link 
+                className='nav-link'
+                to={prefixLink(link)}>
+                {name}
+            </Link>
+        );
+    }
 }
 
-class Template extends React.Component {
-  render () {
-    const myListOfPages = [
-      'Home',
-      'About',
-      'Blog',
-      'Events',
-    ];
-    const myLinks = myListOfPages.map((item, i) => (
-      <MyLink name={item} key={i} />
-    ));
+class Template extends React.Component
+{
+    getNavLinks()
+    {
+        let links = data['links'];
+        
+        var link_items = [];
+        for (var i = 0; i < links.length; i++)
+        {
+            let link = links[i];
+            link_items.push(<NavLink name={link} />);
+        }
+        
+        return link_items;
+    }
+    
+    render ()
+    {
+        return (
+        <div>
+            <Headroom>
+                <div className="navbar">
+                    <div className="nav-content">
+                        <Link className="badge">
+                            <img className="logo" src="/assets/temp_logo.png" />
+                            <h1 className="club-title">
+                                <p className="top">Berkeley Student</p>
+                                <p className="bot">Journal of Asian Studies</p>
+                            </h1>
+                        </Link>
 
-    location.pathname
-
-    return (
-      <div>
-        <Headroom>
-        <div className = "nav-content">
-          <img className="logo" src="/assets/temp_logo.png"/>
-          <span className = "club-title">
-            Berkeley Student
-            <span>
-              Journal of Asian Studies
-            </span>
-          </span>
-
-          <Link className="menu-btn">
-            <span className="menu-icon">
-              <span className="menu-bar bar-1"></span>
-              <span className="menu-bar bar-2"></span>
-              <span className="menu-bar bar-3"></span>
-            </span>
-          </Link>
-
-          <nav className="nav-links">
-            <Link
-              className="nav-item"
-              to={prefixLink('/')}
-            >
-              Home
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/about/')}
-            >
-              About
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/journal/')}
-            >
-              Journal
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/blog/')}
-            >
-              Blog
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/podcast/')}
-            >
-              Podcast
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/events/')}
-            >
-              Events
-            </Link>
-          </nav>
+                        <nav className="nav-links">
+                            {this.getNavLinks()}
+                        </nav>
+                    </div>
+                </div>
+            </Headroom>
+                
+            <div className="content">
+                {this.props.children}
+            </div>
         </div>
-        </Headroom>
-        <div
-          className="content"
-        >
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
+        );
+    }
 }
+
+//<Link className="badge" to="/">
+//    <img className="logo" src="/assets/temp_logo.png"/>
+//    <h1 className = "club-title">
+//        Berkeley Student
+//        <p>Journal of Asian Studies</p>
+//    </h1>
+//</Link>
+
+//<Link className="menu-btn">
+//    <span className="menu-icon">
+//        <span className="menu-bar bar-1"></span>
+//        <span className="menu-bar bar-2"></span>
+//        <span className="menu-bar bar-3"></span>
+//    </span>
+//</Link>
 
 export default Template;
