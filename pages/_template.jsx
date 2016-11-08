@@ -17,13 +17,13 @@ class NavLink extends React.Component
         let link = "/";
         if (name && name.length > 0)
             link += name + "/";
-        
+
         let active = this.props.active ? ' active' : '';
-        
+
         return (
-            <Link 
+            <Link
                 to = {prefixLink(link)}
-                className = {'nav-link' + active} 
+                className = {'nav-link' + active}
                 onClick={this.props.clickHandler}
                 >
                 {name}
@@ -33,11 +33,11 @@ class NavLink extends React.Component
 }
 
 class Template extends React.Component
-{   
+{
     constructor(props)
     {
         super(props);
-        
+
         // get pathname and strip all '/'
         let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
         this.state = {
@@ -45,30 +45,30 @@ class Template extends React.Component
             showMenu: false,
         };
     }
-    
+
     getNavLinks()
     {
         let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
-        
+
         return data['links'].map(link => (
-            <NavLink 
+            <NavLink
                 name = {link}
-                key  = {'nav-' + link} 
+                key  = {'nav-' + link}
                 active = {link === page}
                 clickHandler = {() => this.toggleMenu()}
             />
         ));
     }
-    
+
     toggleMenu()
     {
         this.setState({showMenu: !this.state.showMenu});
     }
-    
+
     render()
     {
         let showMenu = this.state.showMenu ? ' show' : ' hide';
-        
+
         return (
         <div>
             <Headroom>
@@ -81,19 +81,19 @@ class Template extends React.Component
                                 <p className="bot">Journal of Asian Studies</p>
                             </h1>
                         </Link>
-                        
+
                         <nav className={"nav-links " + showMenu}>
                             {this.getNavLinks()}
                         </nav>
 
-                        <img src="/assets/menu_white.png" 
+                        <img src="/assets/menu_white.png"
                              className="menu-button"
                              onClick={() => this.toggleMenu()}
-                            />
+                        />
                     </div>
                 </div>
             </Headroom>
-                
+
             <div className="content">
                 {this.props.children}
             </div>
