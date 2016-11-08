@@ -1,10 +1,10 @@
 export default
 {
 	"links": [
-		"about", 
-		"journal", 
-		"blog", 
-		"podcast", 
+		"about",
+		"journal",
+		"blog/", 
+		"podcast",
 		"events",
     ]
 }

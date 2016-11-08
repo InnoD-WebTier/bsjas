@@ -13,7 +13,7 @@ class NavLink extends React.Component
 {
     render()
     {
-        let name = this.props.name;
+        let name = this.props.name.replace("/", "");
         let link = "/";
         if (name && name.length > 0)
             link += name + "/";
@@ -94,7 +94,7 @@ class Template extends React.Component
                 </div>
             </Headroom>
 
-            <div className="content">
+            <div className={this.props.route.path === '/' ? "" : "content"}>
                 {this.props.children}
             </div>
         </div>
