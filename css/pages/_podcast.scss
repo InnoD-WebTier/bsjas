@@ -1,0 +1,25 @@
+@import 'variables';
+
+.podcast
+{
+    p.desc {
+        width: 75%;
+        min-width: 320px;
+        margin: 20px auto;
+
+        font-size: 1rem;
+        @media screen and (min-width: 3 * $profile-width) {
+            font-size: 1.25rem;
+        }
+    }
+    
+    .soundcloud-embed {
+        display: block;
+        margin: 40px auto;
+        border: none;
+        
+        height: 500px;
+        width: 60%;
+        min-width: $width-increments;
+    }
+}
