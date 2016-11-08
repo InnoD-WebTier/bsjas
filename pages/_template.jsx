@@ -1,9 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
-import '../css/markdown-styles'
-import '../css/main'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import Headroom from 'react-headroom';
+import '../css/markdown-styles';
+import '../css/main';
 
 // import data
 import data from './data/nav.js';
@@ -29,6 +30,18 @@ class NavLink extends React.Component
 
 class Template extends React.Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.state = {showMenu: false};
+    }
+    
+    toggleMenu()
+    {
+        console.log("toggle");
+        this.setState({showMenu: !this.state.showMenu});
+    }
+    
     getNavLinks()
     {
         let links = data['links'];
@@ -37,7 +50,7 @@ class Template extends React.Component
         for (var i = 0; i < links.length; i++)
         {
             let link = links[i];
-            link_items.push(<NavLink name={link} />);
+            link_items.push(<NavLink key={'nav-' + i} name={link} />);
         }
         
         return link_items;
@@ -45,12 +58,15 @@ class Template extends React.Component
     
     render ()
     {
+        console.log(this.state.showMenu);
+        let navLinksClasses = 'nav-links' + (this.state.showMenu ? '' : ' collapse');
+        
         return (
         <div>
             <Headroom>
                 <div className="navbar">
                     <div className="nav-content">
-                        <Link className="badge">
+                        <Link className="badge" to="/">
                             <img className="logo" src="/assets/temp_logo.png" />
                             <h1 className="club-title">
                                 <p className="top">Berkeley Student</p>
@@ -58,7 +74,12 @@ class Template extends React.Component
                             </h1>
                         </Link>
 
-                        <nav className="nav-links">
+                        <img src="/assets/menu_white.png" 
+                             className="menu-button"
+                             onClick={this.toggleMenu.bind(this)}
+                            />
+                        
+                        <nav className={navLinksClasses}>
                             {this.getNavLinks()}
                         </nav>
                     </div>
@@ -72,14 +93,6 @@ class Template extends React.Component
         );
     }
 }
-
-//<Link className="badge" to="/">
-//    <img className="logo" src="/assets/temp_logo.png"/>
-//    <h1 className = "club-title">
-//        Berkeley Student
-//        <p>Journal of Asian Studies</p>
-//    </h1>
-//</Link>
 
 //<Link className="menu-btn">
 //    <span className="menu-icon">

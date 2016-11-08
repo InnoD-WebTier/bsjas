@@ -1,20 +1,23 @@
 @import 'variables';
 
+$nav-height: 80px;
 .navbar {
-    height: 80px;
+    height: $nav-height;
     color: $off-white;
     background-color: $primary-red;
 }
 
 .nav-content {
-    margin: 0px auto;
     height: 100%;
-    width: 100%;
     max-width: 4 * $width-increments;
+    
+    margin: 0px auto;
+    padding: 0px 20px;
     
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .badge {
@@ -28,32 +31,92 @@
     margin-right: 12px;
 }
 .club-title {
-    font-size: 1.4rem;
+    display: none;
     letter-spacing: 1.1px;
     
-    .top { font-family: $font-body;}
+    .top { font-family: $font-header; }
+    .bot { font-family: $font-body;   }
+}
+
+
+.menu-button {
+    $menu-size: 32px;
+    width: $menu-size;
+    height: $menu-size;
+    background-color: $primary-red;
+    
+    cursor: pointer;
 }
 
 .nav-links {
-    padding: 0px 12px;
+    float: left;
+    left: 0px;
+    top: $nav-height;
+    position: absolute;
     
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    width: 100%;
+    background-color: #9F001A;
+    
+    max-height: 50vh;
+    transition: all 1s linear;
+//    -webkit-transition: all 0.5s linear;
 }
+.nav-links.collapse {
+    max-height: 0px;
+}
+
+$menu-item-height: 44px;
 .nav-link {
-    font-size: 0.85rem;
-//    font-weight: normal;
+    display: block;
+    padding: 0px 16px;
     
-    color: $off-white;
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+    
+    vertical-align: center;
     text-transform: capitalize;
-    
-    padding: 12px 16px 8px 16px;
-    display: inline-flex;
-    align-items: flex-end;
 }
-.nav-link:first-child {
-    color: $primary-red;
-    background-color: $off-white;
+.nav-link.active {
+    border-left: 4px solid white;
+}
+
+@media screen and (min-width: 2 * $width-increments)
+{
+    // 600px: show title text
+    .club-title { 
+        display: block; 
+        .top { font-size: 1.1rem; }
+        .bot { font-size: 1.15rem; }
+    }
+}
+
+@media screen and (min-width: 3 * $width-increments)
+{
+    // 900px: show full links
+    .club-title { 
+        .top { font-size: 1.3rem; }
+        .bot { font-size: 1.35rem; }
+    }
+    
+    .menu-button { display: none; }
+    .nav-links {
+        height: 100%;
+        
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .nav-link {
+        font-size: 0.85rem;
+
+        padding: 12px 16px 12px 16px;
+        display: inline-flex;
+        align-items: flex-end;
+    }
+    
+    //.nav-link:first-child {
+    //    color: $primary-red;
+    //    background-color: $off-white;
+    //}
 }
