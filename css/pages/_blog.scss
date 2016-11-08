@@ -48,3 +48,127 @@
 		margin: 35px 0px;
 	}
 }
+
+.blog-landing-main-class {
+  margin-bottom: 2em;
+}
+
+p {
+  color: $primary-grey;
+}
+
+.section-subheader {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+    .right {
+        float: right;
+        color: $primary-teal;
+    }
+
+    .left {
+        float:left;
+    }
+    
+    overflow: auto;
+}
+
+ul.most-recent-blogs {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.by-region-blogs {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul.most-recent-blogs li {
+  display: inline-block;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  position: relative;
+  
+  .img-container {
+    background: url("/assets/blog-landing-tile.jpg");
+    height: 10em;
+    width: 10em;  
+    background-size: cover;
+  }
+}
+
+ul.by-region-blogs li {
+  display: inline-block;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  position: relative;
+
+  .img-container {
+    background: url("/assets/blog-landing-tile.jpg");
+    height: 10em;
+    width: 10em;  
+    background-size: cover;
+  }
+}
+
+li span.tile-title {
+  background: rgba(255,255,255,0.5);
+  color: black;
+  cursor: pointer;
+  display: table;
+  left: 0;
+  position: absolute;
+  top: 0;
+  height: 10em;
+  width: 10em;
+  opacity: 0;
+}
+
+li span.tile-title span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+li:hover span.tile-title {
+  opacity: 1;
+}
+
+.archives-container {
+    margin: auto;
+    width: 50%;
+}
+
+ul.archives {
+  width: 100%;
+  max-width: 600px;
+  color: $primary-grey;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  ul.archives {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  ul.archives {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
