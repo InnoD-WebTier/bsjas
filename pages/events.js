@@ -54,7 +54,13 @@ class Events extends React.Component {
               </div>
             </div>
           </div>
+        </div>
 
+        <div className="events-past">
+          <div className="content-header">
+            <span>Events / </span>
+            <span className="subheader">Past</span>
+          </div>
           <div className="row">
             <div className="subevent">
               <img src="http://imgur.com/fm0Ow8Z.jpg" />
