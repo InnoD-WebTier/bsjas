@@ -1,7 +1,12 @@
 .journals {
-	width: 100%;
-	height: auto;
-	margin: 75px 0rem;
+	width: 87.5%;
+	height: 450px;
+	margin: 75px 12.5% 75px 0px;
+	@media screen and (max-width: 1200px) {
+		height: auto;
+		width: 75%;
+		margin: 75px auto;
+	}
 
 	.tab-nav {
 		width: 20%;
@@ -16,34 +21,28 @@
 
 		  &:hover {
 			  background-color: $primary-teal;
-			  color: #FFF;
+			  color: white;
 		  }
 		}
 
+		.active {
+			background-color: $primary-teal;
+			color: white;
+		}
 	}
+
 	.tab-data-container {
 		width: 80%;
 		display: inline-block;
 
-		.tab-title {
-			color: $primary-grey;
-			text-transform: uppercase;
-			text-align: center;
-			margin-bottom: 2rem;
-			font-size: 1.1rem;
-			letter-spacing: .1rem;
-		}
-
 		.img-container {
-			width: 30%;
+			width: 35%;
 			display: inline-block;
 			vertical-align: top;
 			text-align: center;
-
 			img {
-				width: 100%;
+				width: 90%;
 			}
-
 			.caption {
 				font-size: 0.8rem;
 				text-decoration: none;
@@ -52,19 +51,19 @@
 		}
 
 		.data {
-			width: 60%;
+			width: 50%;
 			margin-left: 10%;
 			display: inline-block;
 		}
 
 		.author {
-			text-align: right;
+			text-align: left;
 			text-transform: uppercase;
 			padding-bottom: 5px;
 		}
 		.title {
 			margin-bottom: 10px;
-			text-align: right;
+			text-align: left;
 			font-size: .9rem;
 			padding-bottom: 10px;
 		}
@@ -73,7 +72,7 @@
 }
 
 .submit {
-	width: 100%;
+	width: 75%;
 	margin: 0px auto 80px auto;
 
 	.question {
@@ -95,3 +94,80 @@
 		color: $primary-teal;
 	}
 }
+
+@media (max-width: 1200px) {
+	.journals .tab-data-container {
+		width: 100%;
+		.img-container {
+			display: none;
+		}
+		.data {
+			width: 100%;
+			margin-left: 0%;
+		}
+	}
+	.journals .tab-nav {
+		display: none;
+	}
+}
+
+
+.tab-nav-mobile {
+	@media (min-width: 1200px) {
+		display: none;
+	}
+	width: 100%;
+	display: block;
+	margin-bottom: 2rem;
+
+	&:hover .dropdown-content {
+		display: block;
+	}
+	&:hover .dropdown {
+		background-color: white;
+	}
+
+	.dropdown {
+		position: relative;
+		border: none;
+    border-bottom: 2px solid $primary-teal;
+		background-color: white;
+    color: black;
+    padding: 1rem 1rem 0.75rem 0rem;
+		text-align: left;
+		outline: none;
+    cursor: pointer;
+		min-width: 160px;
+		.right {
+			position: absolute;
+			right: 15px;
+		}
+	}
+
+	.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+	}
+
+	.dropdown-content div {
+    color: $off-black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	}
+
+	.dropdown-content div:hover {
+		background-color: $off-white
+	}
+}
+
+// .tab-title {
+// 	color: $primary-grey;
+// 	text-transform: uppercase;
+// 	text-align: center;
+// 	margin-bottom: 2rem;
+// 	font-size: 1.1rem;
+// 	letter-spacing: .1rem;
+// }

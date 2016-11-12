@@ -21,8 +21,8 @@ $font-body: 'Circular', sans-serif;
 $width-increments: 300px;
 
 @mixin transition($props) {
-     transition: $props;
-    -ms-transition: $props;
-    -moz-transition: $props;
-    -webkit-transition: $props;
+   transition: $props;
+  -ms-transition: $props;
+  -moz-transition: $props;
+  -webkit-transition: $props;
 }

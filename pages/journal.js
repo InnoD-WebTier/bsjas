@@ -15,6 +15,12 @@ class Journal extends React.Component {
 
     const tabs = info["journals"];
     const journals = info["journals"];
+    const title = journals[this.state.activeTab]["year"];
+
+    const tabStyle = (i) => {
+      const active = (this.state.activeTab === i) ? 'tab active' : 'tab';
+      return active;
+    }
 
     const handleClick = (index) => {
       this.setState({
@@ -26,7 +32,16 @@ class Journal extends React.Component {
       <div
         key={i}
         onClick={() => handleClick(i)}
-        className="tab"
+        className={tabStyle(i)}
+      >
+        {item.year}
+      </div>
+    ));
+
+    const mobileNavTabs = tabs.map((item, i) => (
+      <div
+        key={i}
+        onClick={() => handleClick(i)}
       >
         {item.year}
       </div>
@@ -36,7 +51,7 @@ class Journal extends React.Component {
       const activeTab = this.state.activeTab;
       const data = journals[activeTab];
       const journalContent = data.content.map((item, i) => (
-        <div>
+        <div key={i}>
           <div className="author">
             {item.author}
           </div>
@@ -54,9 +69,6 @@ class Journal extends React.Component {
             </a>
           </div>
       	  <div className="data">
-            <div className="tab-title">
-              {data.title}
-            </div>
       	    {journalContent}
       	  </div>
       	</div>
@@ -65,19 +77,17 @@ class Journal extends React.Component {
 
     const submitQA = () => {
       const data = info["submit"];
-      const submitContent = function (item) {
-        return (
-          <div>
-            <div className="question">
-              {item.question}
-            </div>
-            <div className="answer">
-              <div dangerouslySetInnerHTML={{ __html: item.answer }} />
-            </div>
+      const submitContent = data.map((item, i) => (
+        <div key={i}>
+          <div className="question">
+            {item.question}
           </div>
-        );
-      }
-      return data.map(submitContent);
+          <div className="answer">
+            <div dangerouslySetInnerHTML={{ __html: item.answer }} />
+          </div>
+        </div>
+      ));
+      return submitContent;
     }
 
     return (
@@ -92,6 +102,15 @@ class Journal extends React.Component {
       	<div className="journals">
           <div className="tab-nav">
             {navTabs}
+          </div>
+          <div className="tab-nav-mobile">
+            <button className="dropdown">
+              <span className="left">{title}</span>
+              <span className="right">▾</span>
+            </button>
+            <div className="dropdown-content">
+              {mobileNavTabs}
+            </div>
           </div>
       	  {tabContent()}
       	</div>
