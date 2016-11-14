@@ -1,7 +1,7 @@
 @mixin vertical-center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 a {
@@ -17,12 +17,16 @@ a {
 .nav-links {
 	position: absolute;
 	right: 1rem;
-  bottom: 0rem;
-  height: 2.55rem;
+	bottom: 0rem;
+	height: 2.55rem;
 	.nav-item {
-	  font-family: $font-body;
-	  color: $off-white;
-	  padding: 0.75rem 1rem;
+		font-family: $font-body;
+		color: $off-white;
+		padding: 0.75rem 1rem 1.55rem;
+	}
+	.nav-item:hover {
+		background: $off-white;
+		color: $primary-red;
 	}
 }
 
