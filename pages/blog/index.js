@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 
 // import data
-import data from './data/blogLanding';
+import data from '../data/blogLanding';
 
 class Blog extends React.Component {
   render () {
