@@ -94,7 +94,7 @@ class Template extends React.Component
                 </div>
             </Headroom>
 
-            <div className={this.props.route.path === '/' ? "" : "content"}>
+            <div className={window.location.pathname === '/' ? "" : "content"}>
                 {this.props.children}
             </div>
         </div>

@@ -9,18 +9,18 @@ class Index extends React.Component {
         <Helmet
           title={config.siteTitle}
         />
-        <div className="Main">
-          <div className="Main__box">
-            <p className="Main__title">
+        <div className="site-landing">
+          <div className="box">
+            <p className="title">
               Engaging the Berkeley Community in dialogue on Asia.
             </p>
-            <p className="Main__subtitle">
+            <p className="subtitle">
               BSJAS is an Institute of East Asian Studies sponsored journal that strives to showcase the best undergraduate and graduate work in Asia-related fields.
             </p>
-            <div className="Main__button">
+            <div className="button">
               Submit your work
             </div>
-            <div className="Main__button">
+            <div className="button">
               Learn more
             </div>
           </div>

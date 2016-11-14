@@ -1,7 +1,7 @@
-.Main {
+.site-landing {
 	color: white;
 	width: 100%;
-	height: calc(100vh - 100px);
+	height: calc(100vh - #{$nav-height});
 	background: url(/assets/bg.jpeg) no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -11,7 +11,7 @@
 	justify-content: center;
 	align-items: center;
 
-	.Main__box {
+	.box {
 		height: auto;
 		width: 60vw;
 		text-align: center;
@@ -19,13 +19,13 @@
 		p {
 			padding: 1em 0;
 		}
-		.Main__title {
+		.title {
 			font-size: 3.25em;
 		}
-		.Main__subtitle {
+		.subtitle {
 			font-size: 1.25em;
 		}
-		.Main__button {
+		.button {
 			background-color: #9f001a;
 			width: 175px;
 			padding: 10px 5px;
@@ -33,10 +33,9 @@
 			display: inline-block;
 			margin: 10px;
 		}
-		.Main__button:hover {
+		.button:hover {
 			background-color: white;
 			color: #9f001a;
 		}
 	}
-
 }
