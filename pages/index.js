@@ -19,7 +19,7 @@ class Index extends React.Component {
             <p className="subtitle">
               BSJAS is an Institute of East Asian Studies sponsored journal that strives to showcase the best undergraduate and graduate work in Asia-related fields.
             </p>
-            <Link to={prefixLink("journal/#submit")}>
+            <Link to={prefixLink("journal/")}>
               <div className="button">
                 Submit your work
                 </div>
