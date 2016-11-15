@@ -1,8 +1,9 @@
 ---
-title: New Beginnings
+title: Dank Memes
 author: Hilton Lipschitz  
 date: "2015-05-28T22:40:32.169Z"
 layout: post
+region: Central Asia
 path: "/blog/hey/"
 ---
 

@@ -1,6 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
+import access from 'safe-access'
+import sortBy from 'lodash/sortBy';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
 
 // import data
 import data from '../data/blogLanding';
@@ -8,13 +12,26 @@ import data from '../data/blogLanding';
 class Blog extends React.Component {
   render () {
 
-    const blogTitles = [{ title: "A" }, { title: "B" }, { title: "C" }, { title: "D" }];
-    const mostRecentBlogs = blogTitles.map((item, i) => (
-      <li key={i}>
-        <div className="img-container"></div>
-        <span className="tile-title"><span>{item.title}</span></span>
-      </li>
-    ));
+    const sortedPages = sortBy(this.props.route.pages, (page) =>
+      access(page, 'data.date')
+    ).reverse();
+
+    const mostRecentBlogs = sortedPages.map((page) => {
+      if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
+        const title = access(page, 'data.title') || page.path;
+        return (
+          <div key={page.path}>
+            <Link to={prefixLink(page.path)}>
+              <li>
+                <div className="img-container"></div>
+                <span className="tile-title"><span>{title}</span></span>
+              </li>
+            </Link>
+          </div>
+        );
+      }
+    });
+
     const regions = [{ title: "Central Asia" }, { title: "East Asia" }, { title: "South Asia" }, { title: "Southeast Asia" }];
     const byRegion = regions.map((item, i) => (
       <li key={i}>

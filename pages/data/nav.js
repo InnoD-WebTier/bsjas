@@ -3,7 +3,7 @@ export default
 	"links": [
 		"about",
 		"journal",
-		"blog/", 
+		"blog", 
 		"podcast",
 		"events",
     ]

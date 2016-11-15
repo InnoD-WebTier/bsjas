@@ -1,6 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
 
 class Index extends React.Component {
   render () {
@@ -17,12 +19,16 @@ class Index extends React.Component {
             <p className="subtitle">
               BSJAS is an Institute of East Asian Studies sponsored journal that strives to showcase the best undergraduate and graduate work in Asia-related fields.
             </p>
-            <div className="button">
-              Submit your work
-            </div>
-            <div className="button">
-              Learn more
-            </div>
+            <Link to={prefixLink("journal/#submit")}>
+              <div className="button">
+                Submit your work
+                </div>
+            </Link>
+            <Link to={prefixLink("about/")}>
+              <div className="button">
+                Learn more
+              </div>
+            </Link>
           </div>
         </div>
       </div>

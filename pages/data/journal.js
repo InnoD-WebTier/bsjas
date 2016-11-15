@@ -5,7 +5,7 @@ export default
 			"title": 'BSJAS Fifth Edition',
 			"year": 'Spring 2015',
 			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/BSJAS-2015-Final-Int.pdf',
-			"cover": '/assets/2015cover.png',
+			"cover": '/assets/journal/2015cover.png',
 			"content": [
 		  {
 			  "author": "Vidhatha Reddy",
@@ -32,7 +32,7 @@ export default
 			"title": 'BSJAS Fourth Edition',
 			"year": 'Spring 2014',
 			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/2014-BSJAS-Int.pdf',
-			"cover": '/assets/2014cover.png',
+			"cover": '/assets/journal/2014cover.png',
 			"content": [
 		  {
 			  "author": "Marisa Mito",
@@ -55,7 +55,7 @@ export default
 		 "title": 'BSJAS Third Edition',
 			"year": 'Spring 2013',
 			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v3_2013_Spring.pdf',
-			"cover": '/assets/2013cover.png',
+			"cover": '/assets/journal/2013cover.png',
 			"content": [
 		  {
 			  "author": "Kankan Xie",
@@ -81,7 +81,7 @@ export default
 			"title": 'BSJAS Second Edition',
 			"year": 'Spring 2012',
 			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v2_2012_Spring.pdf',
-			"cover": '/assets/2012cover.png',
+			"cover": '/assets/journal/2012cover.png',
 			"content": [
 		  {
 			  "author": "Dawei Ding",
@@ -101,7 +101,7 @@ export default
 			"title": 'BSJAS Inaugural Edition',
 			"year": 'Fall 2010',
 			"link": 'https://www.ocf.berkeley.edu/~bsjas/wp-content/uploads/2015/05/v1_2010_Fall.pdf',
-			"cover": '/assets/2010cover.png',
+			"cover": '/assets/journal/2010cover.png',
 			"content": [
 		  {
 			  "author": "James Lin",
@@ -138,7 +138,7 @@ export default
 		  "answer": "While the Journal aims to showcase original research papers, book reviews, film reviews, etc., we also review creative works (e.g. art, poetry, photojournalism). Students wishing to interview selected faculty or submit cover art, are also invited to submit. The Journal Committee welcomes entries with relevance to “Asia,” as defined geographically by regions spanning East Asia, South and Southeast Asia, and Central Asia. If you are unsure if you work is relevant and eligible, feel free to contact us at <span class='blip'>berkeleysjas@gmail.com</span> for clarification."
 	  }, {
 		  "question": "Is there a specific format for submission?",
-		  "answer": "Please submit documents in pdf format (for images, submit in TIFF, PNG, or JPEG format) to <span class='blip'>berkeleysjas@gmail.com</span>. Title the file YourName.pdf. Submissions must include a cover page with the author’s name, discipline, year in school, and formatted with one-inch margins, single-spaced, and Times New Roman 12 point font. Manuscripts must be from 1750-7500 words, and must include a 250 word abstract at the beginning of the document. <span class='p'></span> Article manuscripts must adhere to the Chicago Manual of Style. This means that submissions must have footnote citations and a works cited page. <span class='p'></span> Email all submissions to <span class='blip'><span class='blip'>berkeleysjas@gmail.com</span></span>. The subject line should say “BSJAS Entry: Paper Title”. The body of the email must include the following: <span class='p'></span> <ul><li>Author’s Full name</li> <li>Year (or date of graduation if recently matriculated)</li> <li>Major or Area of Study</li> <li>Title of Paper</li></ul>"
+		  "answer": "Please submit documents in pdf format (for images, submit in TIFF, PNG, or JPEG format) to <span class='blip'>berkeleysjas@gmail.com</span>. Title the file YourName.pdf. Submissions must include a cover page with the author’s name, discipline, year in school, and formatted with one-inch margins, single-spaced, and Times New Roman 12 point font. Manuscripts must be from 1750-7500 words, and must include a 250 word abstract at the beginning of the document. <span class='p'></span> Article manuscripts must adhere to the Chicago Manual of Style. This means that submissions must have footnote citations and a works cited page. <span class='p'></span> Email all submissions to <span class='blip'><span class='blip'>berkeleysjas@gmail.com</span></span>. The subject line should say “BSJAS Entry: Paper Title”. The body of the email must include the following:</br></br> <span class='p'></span> <ul><li>Author’s Full name</li> <li>Year (or date of graduation if recently matriculated)</li> <li>Major or Area of Study</li> <li>Title of Paper</li></ul>"
 	  }, {
 		  "question": "What determines selection and publication?",
 		  "answer": "Each piece of work is evaluated by the following criteria:<span class='p'></span> <ul></br><li>Originality of work</li> <li>Assertion of a clear and significant argument</li> <li>Quality of the evidence provided to support claims</li> <li>Organization of ideas in guiding readers’ understanding</li> <li>Grammar, syntax, spelling</li></ul></br> <span class='p'></span> Moreover, while the Journal Committee chooses to evaluate each submission based on several criteria, we also approach and evaluate each entry holistically (particularly for creative works)."

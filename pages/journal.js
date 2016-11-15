@@ -114,7 +114,7 @@ class Journal extends React.Component {
           </div>
       	  {tabContent()}
       	</div>
-        <div className="submit">
+        <div id="submit" className="submit">
 	        <div className="content-header">
             <span>Journal / </span>
             <span className="subheader">Submit</span>

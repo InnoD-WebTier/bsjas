@@ -13,7 +13,7 @@ class NavLink extends React.Component
 {
     render()
     {
-        let name = this.props.name.replace("/", "");
+        let name = this.props.name;
         let link = "/";
         if (name && name.length > 0)
             link += name + "/";
@@ -75,7 +75,7 @@ class Template extends React.Component
                 <div className="navbar">
                     <div className="nav-content">
                         <Link className="badge" to="/">
-                            <img className="logo" src="/assets/temp_logo.png" />
+                            <img className="logo" src="/assets/logo.png" />
                             <h1 className="club-title">
                                 <p className="top">Berkeley Student</p>
                                 <p className="bot">Journal of Asian Studies</p>

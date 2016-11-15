@@ -1,17 +1,15 @@
 .section-subheader {
     margin-top: 1em;
     margin-bottom: 1em;
-
+    overflow: auto;
+    
     .right {
         float: right;
         color: $primary-teal;
     }
-
     .left {
-        float:left;
+        float: left;
     }
-
-    overflow: auto;
 }
 
 .blog-landing {
