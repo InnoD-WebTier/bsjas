@@ -102,6 +102,21 @@ li:hover span.tile-title {
 	}
 }
 
+@media (max-width: 900px) {
+	.most-recent-blogs {
+		margin-top: 50px;
+	}
+	.img-container {
+		margin-bottom: 40px;
+	}
+	.tile-title {
+		display: inline-block;
+		background: none;
+		opacity: 1;
+		top: -30px;
+	}
+}
+
 @media (min-width: 900px) {
 	.archives {
 		-webkit-column-count: 2;
