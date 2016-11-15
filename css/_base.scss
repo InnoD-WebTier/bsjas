@@ -1,8 +1,12 @@
 * {
     margin: 0px;
     padding: 0px;
+    
+    text-decoration: none;
     font-family: $font-body;
 }
+
+a { color: $off-white; }
 
 .headroom {
   z-index: 2 !important;

@@ -14,7 +14,16 @@ $primary-teal: #009899;
 $primary-grey: #606060;
 $off-black: #353535;
 $off-white: #fcfcfd;
+$white: #ffffff;
+$nav-height: 80px;
 $font-header: 'Circular-Bold', sans-serif;
 $font-body: 'Circular', sans-serif;
 
 $width-increments: 300px;
+
+@mixin transition($props) {
+   transition: $props;
+  -ms-transition: $props;
+  -moz-transition: $props;
+  -webkit-transition: $props;
+}

@@ -7,7 +7,7 @@ import { config } from 'config';
 import data from './data/about';
 
 // constants
-const PATH_ASSETS = '../assets/';
+const PATH_ASSETS = '../assets/team/';
 
 
 /**
