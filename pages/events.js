@@ -19,7 +19,7 @@ class Events extends React.Component {
           <div className="desc">Spring 2015 Symposium</div>
         </div>
         {/* For upcoming events, it would be best to remove this repetitive structure with
-            a map function -- provided we have the data for upcoming events arleady*/}
+            a map function -- provided we have the data for upcoming events already*/}
         <div className="events-upcoming">
           <div className="content-header">
             <span>Events / </span>

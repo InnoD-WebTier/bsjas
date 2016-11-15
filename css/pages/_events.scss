@@ -1,7 +1,9 @@
+$profile-width: 300px;
+
 .events-main {
   margin-top: 2rem;
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   img {
     width: 100%;
   }
@@ -15,8 +17,8 @@
 .events-upcoming, .events-past {
   text-align: center;
   margin-top: 2rem;
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   .row {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
@@ -25,7 +27,9 @@
 
 .subevent {
   display: inline-block;
-  width: 33%;
+  width: 31%;
+  margin-left: 1%;
+  margin-right: 1%;
   vertical-align: top;
   .desc {
     text-align: center;
@@ -36,11 +40,17 @@
   .title {
       margin-top: 0.25rem;
       color: $primary-red;
-      font-size: 0.9375rem;
+      font-size: 0.8125rem;
+      @media screen and (min-width: 3 * $profile-width) {
+        font-size: 1rem;
+      }
   }
   .info {
       margin-top: 0.25rem;
       color: $primary-grey;
       font-size: 0.8125rem;
+      @media screen and (min-width: 3 * $profile-width) {
+        font-size: 0.9375rem;
+      }
   }
 }
