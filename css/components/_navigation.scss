@@ -1,77 +1,132 @@
-@mixin vertical-center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-a {
-	text-decoration: none;
-}
-
-.logo {
-	height: 60px;
-	float: left;
-	padding-right: 15px;
-}
-
-.nav-links {
-	position: absolute;
-	right: 1rem;
-  bottom: 0rem;
-  height: 2.55rem;
-	.nav-item {
-	  font-family: $font-body;
-	  color: $off-white;
-	  padding: 0.75rem 1rem;
-	}
+.navbar {
+    height: $nav-height;
+    color: $off-white;
+    background-color: $primary-red;
 }
 
 .nav-content {
-	position: relative;
-	background-color: $primary-red;
-	padding: 20px;
-	overflow: hidden;
+    height: 100%;
+    max-width: 4 * $width-increments;
+
+    margin: 0px auto;
+    padding: 0px 20px;
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.badge {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+}
 .club-title {
-	font-family: $font-header;
-	font-size: 25px;
-  	color: $off-white;
-  	letter-spacing: 1.1px;
-  	@include vertical-center;
-  	span {
-  		display: block;
-  	}
+    display: none;
+    letter-spacing: 1.1px;
+
+    .top { font-family: $font-header; }
+    .bot { font-family: $font-body;   }
 }
 
-.menu-btn {
-	display: block;
+.menu-button {
+    $menu-size: 32px;
+    width: $menu-size;
+    height: $menu-size;
+    background-color: $primary-red;
+
+    cursor: pointer;
+}
+
+$menu-item-height: 44px;
+.nav-links {
+    left: 0px;
+    top: $nav-height;
     position: absolute;
-    text-decoration: none;
-    width: 30px;
-    height: 26px;
-    @include vertical-center;
-    visibility: hidden;
-    right: 20px;
-    .menu-icon {
-    	display: block;
-	    width: 100%;
-	    height: 100%;
-	    position: relative;
+
+    width: 100%;
+    background-color: #9F001A;
+
+    max-height: 0px;
+    overflow: hidden;
+
+    /* NOTE
+     * this is for the dropdown menu animation on mobile
+     * BUT has a side effect of animating the height change between media queries
+     * and I have no idea how to fix that...
+     */
+    @include transition(all 0.2s ease-in-out);
+}
+.nav-links.show {
+    max-height: 6 * $menu-item-height;
+}
+
+.nav-link {
+    display: block;
+    padding: 0px 16px;
+
+    height: $menu-item-height;
+    line-height: $menu-item-height;
+
+    vertical-align: center;
+    text-transform: capitalize;
+}
+.nav-link.active, .nav-link:hover {
+    border-left: 4px solid white;
+}
+
+@media screen and (min-width: 2 * $width-increments)
+{
+    // 600px: show title text
+    .club-title {
+        display: block;
+        .top { font-size: 1.1rem; }
+        .bot { font-size: 1.15rem; }
     }
-    .menu-bar {
-    	position: absolute;
-	    height: 5px;
-	    width: 30px;
-	    background: #fff;
-	    &.bar-1 {
-	    	top: 0;
-	    }
-	    &.bar-2 {
-	    	top: 10px;
-	    }
-	    &.bar-3 {
-	    	top: 20px;
-	    }
+}
+
+@media screen and (min-width: 3 * $width-increments)
+{
+    // 900px: show full links
+    .club-title {
+        .top { font-size: 1.3rem; }
+        .bot { font-size: 1.35rem; }
+    }
+
+    .menu-button { display: none; }
+    .nav-links {
+        width: auto;
+        height: 100%;
+        max-height: 100%;
+        position: static;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .nav-link {
+        font-size: 0.85rem;
+
+        height: auto;
+        line-height: normal;
+        display: inline-block;
+
+        padding: 12px 16px 12px 16px;
+        display: inline-flex;
+        align-items: flex-end;
+    }
+    .nav-link.active, .nav-link:hover {
+        border-left: none; //cancel out mobile indicator
+
+        color: $primary-red;
+        background-color: $off-white;
     }
 }

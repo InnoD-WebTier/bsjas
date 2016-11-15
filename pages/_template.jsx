@@ -1,104 +1,105 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { prefixLink } from 'gatsby-helpers'
-import Headroom from 'react-headroom'
-import '../css/markdown-styles'
-import '../css/main'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers';
+import Headroom from 'react-headroom';
+import '../css/markdown-styles';
+import '../css/main';
 
-class MyLink extends React.Component {
-  render () {
-    return (
-      <div className={"MyLink-"+this.props.name}>
-        <Link to={prefixLink('/' + this.props.name + '/')}>
-          {this.props.name}
-        </Link>
-      </div>
-    );
-  }
+// import data
+import data from './data/nav.js';
+
+class NavLink extends React.Component
+{
+    render()
+    {
+        let name = this.props.name;
+        let link = "/";
+        if (name && name.length > 0)
+            link += name + "/";
+
+        let active = this.props.active ? ' active' : '';
+
+        return (
+            <Link
+                to = {prefixLink(link)}
+                className = {'nav-link' + active}
+                onClick={this.props.clickHandler}
+                >
+                {name}
+            </Link>
+        );
+    }
 }
 
-class Template extends React.Component {
-  render () {
-    const myListOfPages = [
-      'Home',
-      'About',
-      'Blog',
-      'Events',
-    ];
-    const myLinks = myListOfPages.map((item, i) => (
-      <MyLink name={item} key={i} />
-    ));
+class Template extends React.Component
+{
+    constructor(props)
+    {
+        super(props);
 
-    location.pathname
+        // get pathname and strip all '/'
+        let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
+        this.state = {
+            page: page,
+            showMenu: false,
+        };
+    }
 
-    return (
-      <div>
-        <Headroom>
-        <div className = "nav-content">
-          <img className="logo" src="/assets/temp_logo.png"/>
-          <span className = "club-title">
-            Berkeley Student
-            <span>
-              Journal of Asian Studies
-            </span>
-          </span>
+    getNavLinks()
+    {
+        let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
 
-          <Link className="menu-btn">
-            <span className="menu-icon">
-              <span className="menu-bar bar-1"></span>
-              <span className="menu-bar bar-2"></span>
-              <span className="menu-bar bar-3"></span>
-            </span>
-          </Link>
+        return data['links'].map(link => (
+            <NavLink
+                name = {link}
+                key  = {'nav-' + link}
+                active = {link === page}
+                clickHandler = {() => this.toggleMenu()}
+            />
+        ));
+    }
 
-          <nav className="nav-links">
-            <Link
-              className="nav-item"
-              to={prefixLink('/')}
-            >
-              Home
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/about/')}
-            >
-              About
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/journal/')}
-            >
-              Journal
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/blog/')}
-            >
-              Blog
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/podcast/')}
-            >
-              Podcast
-            </Link>
-            <Link
-              className="nav-item"
-              to={prefixLink('/events/')}
-            >
-              Events
-            </Link>
-          </nav>
+    toggleMenu()
+    {
+        this.setState({showMenu: !this.state.showMenu});
+    }
+
+    render()
+    {
+        let showMenu = this.state.showMenu ? ' show' : ' hide';
+
+        return (
+        <div>
+            <Headroom>
+                <div className="navbar">
+                    <div className="nav-content">
+                        <Link className="badge" to="/">
+                            <img className="logo" src="/assets/logo.png" />
+                            <h1 className="club-title">
+                                <p className="top">Berkeley Student</p>
+                                <p className="bot">Journal of Asian Studies</p>
+                            </h1>
+                        </Link>
+
+                        <nav className={"nav-links " + showMenu}>
+                            {this.getNavLinks()}
+                        </nav>
+
+                        <img src="/assets/menu_white.png"
+                             className="menu-button"
+                             onClick={() => this.toggleMenu()}
+                        />
+                    </div>
+                </div>
+            </Headroom>
+
+            <div className={window.location.pathname === '/' ? "" : "content"}>
+                {this.props.children}
+            </div>
         </div>
-        </Headroom>
-        <div
-          className="content"
-        >
-          {this.props.children}
-        </div>
-      </div>
-    );
-  }
+        );
+    }
 }
 
 export default Template;

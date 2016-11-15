@@ -1,0 +1,41 @@
+.site-landing {
+	color: white;
+	width: 100%;
+	height: calc(100vh - #{$nav-height});
+	background: url(/assets/bg.jpeg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.box {
+		height: auto;
+		width: 60vw;
+		text-align: center;
+
+		p {
+			padding: 1em 0;
+		}
+		.title {
+			font-size: 3.25em;
+		}
+		.subtitle {
+			font-size: 1.25em;
+		}
+		.button {
+			background-color: #9f001a;
+			width: 175px;
+			padding: 10px 5px;
+			border: #9f001a solid 2px;
+			display: inline-block;
+			margin: 10px;
+		}
+		.button:hover {
+			background-color: white;
+			color: #9f001a;
+		}
+	}
+}
