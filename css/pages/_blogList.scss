@@ -1,9 +1,24 @@
 .blog-list {
+  
+  margin: auto;
+  width: 80%;
+    
   a {
     color: $off-black;
   }
   
   .post {
     margin-bottom: 2rem;
+      
+    .title {
+		font-weight: bold;
+        font-size: 1.2rem;
+	}
+      
+    .bloglist-author {
+      color: $primary-grey;
+      margin-top: 0.2rem;
+      margin-bottom: 0.4rem;
+    }
   }
 }
