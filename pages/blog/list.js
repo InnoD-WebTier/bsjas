@@ -28,8 +28,8 @@ class List extends React.Component {
         return (
           <div className="post" key={page.path}>
             <Link to={prefixLink(page.path)}>
-              <p>{title}</p>
-              <p>By {author}</p>
+              <p className="title">{title}</p>
+              <p className="bloglist-author">By {author}</p>
               <div dangerouslySetInnerHTML={{ __html: post }} />
             </Link>
           </div>
