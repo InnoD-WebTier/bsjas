@@ -28,6 +28,7 @@
   width: 30%;
   margin-left: 1%;
   margin-right: 1%;
+  vertical-align: top;
   .desc {
     text-align: center;
   }
@@ -37,11 +38,11 @@
   .title {
       margin-top: 0.25rem;
       color: $primary-red;
-      font-size: 1rem;
+      font-size: 0.9375rem;
   }
   .info {
       margin-top: 0.25rem;
       color: $primary-grey;
-      font-size: 0.8rem;
+      font-size: 0.8125rem;
   }
 }
