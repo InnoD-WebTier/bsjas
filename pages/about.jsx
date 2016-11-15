@@ -93,19 +93,19 @@ class About extends React.Component
             <Helmet title={config.siteTitle} />
 
             <section className='desc fluid-width'>
-                <h3 className='content-header'>
+                <div className='content-header'>
                     <span>About / </span>
                     <span className="subheader">Who is BSJAS?</span>
-                </h3>
+                </div>
 
                 {this.getDescription()}
             </section>
 
             <section className='officers fluid-width'>
-                <h3 className='content-header'>
+                <div className='content-header'>
                     <span>About / </span>
                     <span className="subheader">Officers</span>
-                </h3>
+                </div>
 
                 <ul className='profile-grid'>
                     {this.getProfiles(Profile.type.officers)}
@@ -113,10 +113,10 @@ class About extends React.Component
             </section>
 
             <section className='bloggers fluid-width'>
-                <h3 className='content-header'>
+                <div className='content-header'>
                     <span>About / </span>
                     <span className="subheader">Blog Writers</span>
-                </h3>
+                </div>
 
                 <ul className='profile-grid'>
                     {this.getProfiles(Profile.type.bloggers)}
