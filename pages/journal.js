@@ -65,10 +65,13 @@ class Journal extends React.Component {
           <div className="img-container">
             <a href={data.link} target="_blank">
               <img className="cover-img" src={data.cover} />
-              <span className="caption">Click to read!</span>
+              <span className="caption">Click to read publication.</span>
             </a>
           </div>
       	  <div className="data">
+		    <a href={data.link} target="_blank" className="mobile-link">
+			  <span className="caption">Click to read publication.</span>
+			</a>
       	    {journalContent}
       	  </div>
       	</div>
