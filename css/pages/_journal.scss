@@ -7,6 +7,10 @@
 		width: 75%;
 		margin: 75px auto;
 	}
+	@media screen and (max-width: 600px) {
+		height: auto;
+		width: 100%;
+	}
 
 	.tab-nav {
 		width: 20%;
@@ -54,16 +58,16 @@
 			width: 50%;
 			margin-left: 10%;
 			display: inline-block;
-			
+
 			.mobile-link {
 				@media (min-width: 1200px) {
 					display: none;
 				}
-				
+
 				display: block;
 				margin-bottom: 30px;
 			}
-			
+
 			.caption {
 				font-size: 1rem;
 				text-decoration: none;
@@ -89,6 +93,9 @@
 .submit {
 	width: 75%;
 	margin: 0px auto 80px auto;
+	@media screen and (max-width: 600px) {
+		width: 100%;
+	}
 
 	.question {
 		margin-bottom: 10px;
