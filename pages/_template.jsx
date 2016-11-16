@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers';
 import Headroom from 'react-headroom';
 import '../css/markdown-styles';
 import '../css/main';
+import Favicon from 'react-favicon';
 
 // import data
 import data from './data/nav.js';
@@ -69,8 +70,9 @@ class Template extends React.Component
     {
         let showMenu = this.state.showMenu ? ' show' : ' hide';
 
-        return (
+        return (    
         <div>
+            <Favicon url='/assets/logo.png'/>
             <Headroom>
                 <div className="navbar">
                     <div className="nav-content">
