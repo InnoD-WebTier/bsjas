@@ -10,6 +10,7 @@ import { prefixLink } from 'gatsby-helpers';
 import data from '../data/blogLanding';
 
 class Blog extends React.Component {
+
   render () {
 
     const sortedPages = sortBy(this.props.route.pages, (page) =>
@@ -35,13 +36,29 @@ class Blog extends React.Component {
     const regions = [{ title: "Central Asia" }, { title: "East Asia" }, { title: "South Asia" }, { title: "Southeast Asia" }];
     const byRegion = regions.map((page, i) => (
       <div key={page.title}>
-        <Link to={prefixLink("/blog/list/?region=" + page.title)}>
+        <Link to={prefixLink("/blog/list/?type=region?filter=" + page.title)}>
           <li>
             <div className="img-container"></div>
             <span className="tile-title"><span>{page.title}</span></span>
           </li>
         </Link>
       </div>
+    ));
+
+    const years = [
+      { year: "October 2016" },
+      { year: "September 2016" },
+      { year: "April 2016" },
+      { year: "March 2016" },
+      { year: "December 2015" },
+      { year: "November 2015" }];
+
+    const archives = years.map((year, i) => (
+      <li key={i}>
+        <Link to={prefixLink("/blog/list/?type=year?filter=" + year.year)}>
+          {year.year}
+        </Link>
+      </li>
     ));
 
     return (
@@ -84,12 +101,7 @@ class Blog extends React.Component {
 
         <div className="archives-container">
           <ul className="archives">
-            <li>October 2016</li>
-            <li>September 2016</li>
-            <li>April 2016</li>
-            <li>March 2016</li>
-            <li>December 2015</li>
-            <li>November 2015</li>
+            {archives}
           </ul>
         </div>
       </div>

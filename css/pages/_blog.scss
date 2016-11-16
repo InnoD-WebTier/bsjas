@@ -82,6 +82,10 @@ li:hover span.tile-title {
   max-width: 600px;
   color: $primary-grey;
   text-align: center;
+
+  a {
+    color: $primary-grey;
+  }
 }
 
 @media (min-width: 300px) {

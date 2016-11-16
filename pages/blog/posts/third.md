@@ -1,7 +1,8 @@
 ---
 title: Example 3
 author: Hilton Lipschitz  
-date: "2015-05-28T22:40:32.169Z"
+date: "2016-10-28T22:40:32.169Z"
+archive: "October 2016"
 layout: post
 region: Central Asia
 path: "/blog/third/"

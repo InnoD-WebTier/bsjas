@@ -7,26 +7,50 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
 class List extends React.Component {
-  render () {
-    const pathname = decodeURIComponent(window.location.href);
-    const region = pathname.split("?region=")[1];
-    const pages = this.props.route.pages;
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter: "None",
+      type: "None",
+    }
+  }
 
-    console.log(pages);
-    console.log(region);
+  componentDidMount() {
+    const pathname = decodeURIComponent(window.location.href);
+    console.log(pathname);
+    const filter = pathname.split("?filter=")[1];
+    console.log(filter);
+    const type = pathname.split("?type=")[1].split("?filter")[0];
+    console.log(type);
+    this.setState({
+      filter,
+      type,
+    });
+  }
+
+  render () {
+    const pages = this.props.route.pages;
+    const filter = this.state.filter;
+    const type = this.state.type;
 
     let filtered = pages;
 
-    if (region != "all")
-      filtered = pages.filter(page => access(page, 'data.region') === region);
+    if (filter != "all") {
+      if (type === "year") {
+        filtered = pages.filter(page => access(page, 'data.archive') === filter);
+      } else {
+        filtered = pages.filter(page => access(page, 'data.region') === filter);
+      }
+    }
+
+
+    if (filtered.length === 0) {
+      return (
+        <p>Looks like we do not have content for this category yet!</p>
+      );
+    }
 
     const mostRecentBlogs = filtered.map((page) => {
-      if (filtered.length === 0) {
-        return (
-          <p>Looks like we have not posted anything under this category yet!</p>
-        );
-      }
-
       if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
         const title = access(page, 'data.title') || page.path;
         const author = access(page, 'data.author') || "Author Unknown";

@@ -66,11 +66,12 @@ class Template extends React.Component
         this.setState({showMenu: !this.state.showMenu});
     }
 
+
     render()
     {
         let showMenu = this.state.showMenu ? ' show' : ' hide';
 
-        return (    
+        return (
         <div>
             <Favicon url='/assets/logo.png'/>
             <Headroom>
@@ -96,7 +97,7 @@ class Template extends React.Component
                 </div>
             </Headroom>
 
-            <div className={window.location.pathname === '/' ? "" : "content"}>
+            <div className={this.props.children.type.displayName === 'Index' ? "" : "content"}>
                 {this.props.children}
             </div>
         </div>

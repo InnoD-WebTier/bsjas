@@ -6,6 +6,7 @@ import { prefixLink } from 'gatsby-helpers';
 
 class Index extends React.Component {
   render () {
+    console.log(this.props.route);
     return (
       <div>
         <Helmet

@@ -12,6 +12,7 @@ class Journal extends React.Component {
   }
 
   render () {
+    console.log(this.props.route);
 
     const tabs = info["journals"];
     const journals = info["journals"];
