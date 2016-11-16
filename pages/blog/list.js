@@ -8,11 +8,25 @@ import { prefixLink } from 'gatsby-helpers';
 
 class List extends React.Component {
   render () {
-    const sortedPages = sortBy(this.props.route.pages, (page) =>
-      access(page, 'data.date')
-    ).reverse();
+    const pathname = decodeURIComponent(window.location.href);
+    const region = pathname.split("?region=")[1];
+    const pages = this.props.route.pages;
 
-    const mostRecentBlogs = sortedPages.map((page) => {
+    console.log(pages);
+    console.log(region);
+
+    let filtered = pages;
+
+    if (region != "all")
+      filtered = pages.filter(page => access(page, 'data.region') === region);
+
+    const mostRecentBlogs = filtered.map((page) => {
+      if (filtered.length === 0) {
+        return (
+          <p>Looks like we have not posted anything under this category yet!</p>
+        );
+      }
+
       if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
         const title = access(page, 'data.title') || page.path;
         const author = access(page, 'data.author') || "Author Unknown";

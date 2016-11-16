@@ -1,5 +1,5 @@
 ---
-title: What's the deal with airplane food?
+title: Example 3
 author: Hilton Lipschitz  
 date: "2015-05-28T22:40:32.169Z"
 layout: post

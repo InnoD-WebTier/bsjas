@@ -1,5 +1,5 @@
 ---
-title: New Beginnings
+title: Example 1
 author: Hilton Lipschitz  
 date: "2015-05-28T22:40:32.169Z"
 layout: post

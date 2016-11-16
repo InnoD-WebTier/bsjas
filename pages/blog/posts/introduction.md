@@ -1,9 +1,9 @@
 ---
-title: Dank Memes
+title: Example 2
 author: Hilton Lipschitz  
 date: "2015-05-28T22:40:32.169Z"
 layout: post
-region: Central Asia
+region: East Asia
 path: "/blog/hey/"
 ---
 

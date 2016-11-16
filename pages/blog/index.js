@@ -33,18 +33,20 @@ class Blog extends React.Component {
     });
 
     const regions = [{ title: "Central Asia" }, { title: "East Asia" }, { title: "South Asia" }, { title: "Southeast Asia" }];
-    const byRegion = regions.map((item, i) => (
-      <li key={i}>
-        <div className="img-container"></div>
-        <span className="tile-title"><span>{item.title}</span></span>
-      </li>
+    const byRegion = regions.map((page, i) => (
+      <div key={page.title}>
+        <Link to={prefixLink("/blog/list/?region=" + page.title)}>
+          <li>
+            <div className="img-container"></div>
+            <span className="tile-title"><span>{page.title}</span></span>
+          </li>
+        </Link>
+      </div>
     ));
 
     return (
       <div className="blog-landing">
-
         <Helmet title={config.siteTitle} />
-
         <div className="blog-intro">
           <div className="content-header">
             <span>Blog / </span>
@@ -59,7 +61,9 @@ class Blog extends React.Component {
         </div>
 
         <div className="section-subheader">
-          <span className="right">see all</span>
+          <Link to={prefixLink("/blog/list/?region=all")}>
+            <span className="right">see all</span>
+          </Link>
           <span className="left">MOST RECENT BLOGS</span>
         </div>
         <ul className="most-recent-blogs">

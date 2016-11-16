@@ -1,5 +1,5 @@
 ---
-title: Post 11/9 World
+title: Example 2
 author: Hilton Lipschitz  
 date: "2015-05-28T22:40:32.169Z"
 layout: post
