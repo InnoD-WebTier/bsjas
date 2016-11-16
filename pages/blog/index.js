@@ -51,7 +51,8 @@ class Blog extends React.Component {
       { year: "April 2016" },
       { year: "March 2016" },
       { year: "December 2015" },
-      { year: "November 2015" }];
+      { year: "November 2015" }
+    ];
 
     const archives = years.map((year, i) => (
       <li key={i}>
@@ -78,7 +79,7 @@ class Blog extends React.Component {
         </div>
 
         <div className="section-subheader">
-          <Link to={prefixLink("/blog/list/?region=all")}>
+          <Link to={prefixLink("/blog/list/?type=year?filter=all")}>
             <span className="right">see all</span>
           </Link>
           <span className="left">MOST RECENT BLOGS</span>

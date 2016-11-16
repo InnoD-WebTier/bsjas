@@ -17,11 +17,8 @@ class List extends React.Component {
 
   componentDidMount() {
     const pathname = decodeURIComponent(window.location.href);
-    console.log(pathname);
     const filter = pathname.split("?filter=")[1];
-    console.log(filter);
     const type = pathname.split("?type=")[1].split("?filter")[0];
-    console.log(type);
     this.setState({
       filter,
       type,
@@ -42,7 +39,6 @@ class List extends React.Component {
         filtered = pages.filter(page => access(page, 'data.region') === filter);
       }
     }
-
 
     if (filtered.length === 0) {
       return (
