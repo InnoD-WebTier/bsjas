@@ -38,7 +38,6 @@ class Template extends React.Component
     constructor(props)
     {
         super(props);
-
         // get pathname and strip all '/'
         let page = this.props.location.pathname.replace(new RegExp('/', 'g'), '');
         this.state = {
@@ -70,7 +69,7 @@ class Template extends React.Component
     render()
     {
         let showMenu = this.state.showMenu ? ' show' : ' hide';
-
+        
         return (
         <div>
             <Favicon url='/assets/logo.png'/>
@@ -97,7 +96,7 @@ class Template extends React.Component
                 </div>
             </Headroom>
 
-            <div className={this.props.children.type.displayName === 'Index' ? "" : "content"}>
+            <div className={this.props.location.pathname === '/' ? "" : "content"}>
                 {this.props.children}
             </div>
         </div>

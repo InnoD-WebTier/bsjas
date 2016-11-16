@@ -12,7 +12,6 @@ import data from '../data/blogLanding';
 class Blog extends React.Component {
 
   render () {
-
     const sortedPages = sortBy(this.props.route.pages, (page) =>
       access(page, 'data.date')
     ).reverse();

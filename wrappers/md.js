@@ -9,6 +9,7 @@ module.exports = React.createClass({
       router: React.PropTypes.object,
     }
   },
+
   render () {
     const post = this.props.route.page.data
     return (
