@@ -69,15 +69,15 @@ class Template extends React.Component
     render()
     {
         let showMenu = this.state.showMenu ? ' show' : ' hide';
-        
+
         return (
         <div>
-            <Favicon url='/assets/logo.png'/>
+            <Favicon url={prefixLink('/assets/logo.png')}/>
             <Headroom>
                 <div className="navbar">
                     <div className="nav-content">
                         <Link className="badge" to="/">
-                            <img className="logo" src="/assets/logo.png" />
+                            <img className="logo" src={prefixLink("/assets/logo.png")} />
                             <h1 className="club-title">
                                 <p className="top">Berkeley Student</p>
                                 <p className="bot">Journal of Asian Studies</p>
@@ -88,7 +88,7 @@ class Template extends React.Component
                             {this.getNavLinks()}
                         </nav>
 
-                        <img src="/assets/menu_white.png"
+                        <img src={prefixLink("/assets/menu_white.png")}
                              className="menu-button"
                              onClick={() => this.toggleMenu()}
                         />

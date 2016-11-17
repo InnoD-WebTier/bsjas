@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { config } from 'config';
+import { prefixLink } from 'gatsby-helpers';
 import info from './data/journal';
 
 class Journal extends React.Component {

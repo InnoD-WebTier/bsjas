@@ -29,9 +29,9 @@ class Profile extends React.Component
 
     render()
     {
-        const path = prefixLink("' + PATH_ASSETS + this.props.name + '.jpg");
+        const url = prefixLink("'" + PATH_ASSETS + this.props.name + "'.jpg");
         let style = {
-            backgroundImage: 'url(' + path + ')'
+            backgroundImage: 'url("' + PATH_ASSETS + this.props.name + '.jpg")'
         };
 
         return (
