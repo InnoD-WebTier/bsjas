@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import ReactDOM from 'react-dom';
 import { config } from 'config';
+import { prefixLink } from 'gatsby-helpers';
 
 // import data
 import data from './data/about';
@@ -28,8 +29,9 @@ class Profile extends React.Component
 
     render()
     {
+        const path = prefixLink("' + PATH_ASSETS + this.props.name + '.jpg");
         let style = {
-            backgroundImage: 'url("' + PATH_ASSETS + this.props.name + '.jpg")'
+            backgroundImage: 'url(' + path + ')'
         };
 
         return (

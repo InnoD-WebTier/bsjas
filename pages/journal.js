@@ -63,7 +63,7 @@ class Journal extends React.Component {
         <div className="tab-data-container">
           <div className="img-container">
             <a href={data.link} target="_blank">
-              <img className="cover-img" src={data.cover} />
+              <img className="cover-img" src={prefixLink(data.cover)} />
               <span className="caption">Click to read publication.</span>
             </a>
           </div>
