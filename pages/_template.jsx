@@ -76,7 +76,7 @@ class Template extends React.Component
             <Headroom>
                 <div className="navbar">
                     <div className="nav-content">
-                        <Link className="badge" to="/">
+                        <Link className="badge" to={prefixLink("/")}>
                             <img className="logo" src={prefixLink("/assets/logo.png")} />
                             <h1 className="club-title">
                                 <p className="top">Berkeley Student</p>
