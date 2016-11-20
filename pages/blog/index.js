@@ -16,6 +16,11 @@ class Blog extends React.Component {
       access(page, 'data.date')
     ).reverse();
 
+    const backgroundLink = prefixLink(`/assets/blog-landing-tile.jpg`);
+    const style = {
+      background: "url('" + backgroundLink + "') no-repeat center center",
+    };
+
     const mostRecentBlogs = sortedPages.map((page) => {
       if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
         const title = access(page, 'data.title') || page.path;
@@ -23,7 +28,7 @@ class Blog extends React.Component {
           <div key={page.path}>
             <Link to={prefixLink(page.path)}>
               <li>
-                <div className="img-container"></div>
+                <div className="img-container" style={style}></div>
                 <span className="tile-title"><span>{title}</span></span>
               </li>
             </Link>
@@ -37,7 +42,7 @@ class Blog extends React.Component {
       <div key={page.title}>
         <Link to={prefixLink("/blog/list/?type=region?filter=" + page.title)}>
           <li>
-            <div className="img-container"></div>
+            <div className="img-container" style={style}></div>
             <span className="tile-title"><span>{page.title}</span></span>
           </li>
         </Link>

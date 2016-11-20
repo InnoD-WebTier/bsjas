@@ -6,12 +6,18 @@ import { prefixLink } from 'gatsby-helpers';
 
 class Index extends React.Component {
   render () {
+
+    const backgroundLink = prefixLink(`/assets/bg.jpeg`);
+    const style = {
+      background: "url('" + backgroundLink + "') no-repeat center center",
+    };
+
     return (
       <div>
         <Helmet
           title={config.siteTitle}
         />
-        <div className="site-landing">
+        <div className="site-landing" style={style}>
           <div className="box">
             <p className="title">
               Engaging the Berkeley Community in dialogue on Asia.
