@@ -9,17 +9,7 @@ class Events extends React.Component {
         <Helmet
           title={config.siteTitle}
         />
-        <div className="content-header">
-          <span>Events / </span>
-          <span className="subheader">Symposium</span>
-        </div>
 
-        <div className="events-main">
-          <img src="http://i.imgur.com/RRtDu9K.jpg" />
-          <div className="desc">Spring 2015 Symposium</div>
-        </div>
-        {/* For upcoming events, it would be best to remove this repetitive structure with
-            a map function -- provided we have the data for upcoming events already*/}
         <div className="events-upcoming">
           <div className="content-header">
             <span>Events / </span>

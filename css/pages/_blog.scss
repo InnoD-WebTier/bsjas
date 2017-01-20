@@ -39,13 +39,28 @@
 		margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 		position: relative;
 	}
-	.img-container {
-		height: 15rem;
-		width: 15rem;
-	}
 }
 
-.tile-title {
+.region-img-container {
+  height: 15rem;
+  width: 15rem;
+}
+
+.most-recent-container {
+  background-color: $primary-red;
+  height: 15rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  span {
+    padding: 1rem;
+  }
+}
+
+.region-title {
   background: rgba(255,255,255,0.5);
   color: black;
 	// Must be the same as above
@@ -58,15 +73,14 @@
 	top: 0;
   opacity: 0;
 	cursor: pointer;
+  span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
 }
 
-.tile-title span {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
-li:hover span.tile-title {
+li:hover span.region-title {
   opacity: 1;
 }
 

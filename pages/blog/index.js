@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import access from 'safe-access'
 import sortBy from 'lodash/sortBy';
+import uniq from 'lodash/uniq';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
@@ -18,7 +19,11 @@ class Blog extends React.Component {
 
     const backgroundLink = prefixLink(`/assets/blog-landing-tile.jpg`);
     const style = {
-      background: "url('" + backgroundLink + "') no-repeat center center",
+      'background': "url('" + backgroundLink + "') no-repeat center center",
+      '-webkit-background-size': 'cover',
+      '-moz-background-size': 'cover',
+      '-o-background-size': 'cover',
+      'background-size': 'cover',
     };
 
     const mostRecentBlogs = sortedPages.map((page) => {
@@ -28,8 +33,7 @@ class Blog extends React.Component {
           <div key={page.path}>
             <Link to={prefixLink(page.path)}>
               <li>
-                <div className="img-container" style={style}></div>
-                <span className="tile-title"><span>{title}</span></span>
+                <div className="most-recent-container"><span>{title}</span></div>
               </li>
             </Link>
           </div>
@@ -42,26 +46,27 @@ class Blog extends React.Component {
       <div key={page.title}>
         <Link to={prefixLink("/blog/list/?type=region?filter=" + page.title)}>
           <li>
-            <div className="img-container" style={style}></div>
-            <span className="tile-title"><span>{page.title}</span></span>
+            <div className="region-img-container" style={style}></div>
+            <span className="region-title"><span>{page.title}</span></span>
           </li>
         </Link>
       </div>
     ));
 
-    const years = [
-      { year: "October 2016" },
-      { year: "September 2016" },
-      { year: "April 2016" },
-      { year: "March 2016" },
-      { year: "December 2015" },
-      { year: "November 2015" }
-    ];
 
-    const archives = years.map((year, i) => (
+    let archiveYears = this.props.route.pages.map((page, i) => {
+      if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
+        const archive = access(page, 'data.archive');
+        return archive;
+      }
+    });
+
+    archiveYears = uniq(archiveYears);
+
+    const archives = archiveYears.map((year, i) => (
       <li key={i}>
-        <Link to={prefixLink("/blog/list/?type=year?filter=" + year.year)}>
-          {year.year}
+        <Link to={prefixLink("/blog/list/?type=year?filter=" + year)}>
+          {year}
         </Link>
       </li>
     ));

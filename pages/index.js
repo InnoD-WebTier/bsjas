@@ -5,11 +5,21 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
 class Index extends React.Component {
-  render () {
 
+  render () {
     const backgroundLink = prefixLink(`/assets/bg.jpeg`);
     const style = {
-      background: "url('" + backgroundLink + "') no-repeat center center",
+      'background': "url('" + backgroundLink + "') no-repeat center center",
+      'color': 'white',
+      'width': '100%',
+      'height': 'calc(100vh - 80px)',
+      '-webkit-background-size': 'cover',
+      '-moz-background-size': 'cover',
+      '-o-background-size': 'cover',
+      'background-size': 'cover',
+      'display': 'flex',
+      'justify-content': 'center',
+      'align-items': 'center',
     };
 
     return (

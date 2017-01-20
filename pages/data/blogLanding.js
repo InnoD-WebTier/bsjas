@@ -1,4 +1,4 @@
 export default
 {
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque, nulla vestibulum vulputate scelerisque, metus sapien rhoncus sapien, in sagittis metus velit sit amet massa. Ut a malesuada lectus. Mauris non pellentesque elit, a maximus nunc.",
+  "description": "Having solidified the annual academic journal, the BSJAS team is now expanding into new realms, further striving towards its primary goal of engaging the Berkeley community in dialogue on Asia. We are now maintaining a blog where you can find our blog. We will frequently post articles about different parts of Asia here.",
 }

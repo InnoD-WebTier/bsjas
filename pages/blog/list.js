@@ -59,6 +59,9 @@ class List extends React.Component {
             i = i - 1;
           post = page.data.body.substring(0, i) + " ...";
         }
+        post = post.split('\n')[0]
+        post = post.replace(/<(?:.|\n)*?>/gm, '');
+
         return (
           <div className="post" key={page.path}>
             <Link to={prefixLink(page.path)}>
