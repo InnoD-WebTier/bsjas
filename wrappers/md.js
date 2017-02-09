@@ -2,6 +2,7 @@ import React from 'react'
 import 'css/markdown-styles.css'
 import Helmet from "react-helmet"
 import { config } from 'config'
+import { prefixLink } from 'gatsby-helpers'
 
 module.exports = React.createClass({
   propTypes () {
@@ -26,9 +27,9 @@ module.exports = React.createClass({
               <div>{post.author}</div>
             </div>
             <div className="post-social">
-              <img src="/assets/facebook.png"/>
-              <img src="/assets/twitter.png"/>
-              <img src="/assets/mail.png"/>
+              <img src={prefixLink("/assets/facebook.png")}/>
+              <img src={prefixLink("/assets/twitter.png")}/>
+              <img src={prefixLink("/assets/mail.png")}/>
             </div>
           </div>
           <div className="post-text">
