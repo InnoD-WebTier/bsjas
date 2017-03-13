@@ -62,7 +62,9 @@
 
 .region-title {
   background: rgba(255,255,255,0.5);
-  color: black;
+  color: white;
+  font-family: $font-header;
+  font-size: 1.5rem;
 	// Must be the same as above
 	height: 15rem;
 	width: 15rem;

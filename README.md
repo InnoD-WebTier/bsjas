@@ -23,3 +23,14 @@ All blog posts are found in `pages/blog/posts/` directory. Each blog post is wri
 First, you should manually check that the updates you have made were successful and will not break any important functionality of the site. Gatsby allows you to run a local copy of the website to check this. You can think of it as a website only you can view in your browser. To start, open up your terminal and `cd` to wherever you have stored the project directory. From the root of the project directory, run the command `gatsby develop` (a list of possible commands can be found in the `package.json`). Next, navigate to the link returned in the console in your browser, and check that the changes you made to the website worked. Check the browser console for any error messages, and fix if necessary.
 
 Second, you should commit and push your changes to a Github repo that your entire team has access to. This is the best practice for ensuring that everyone on the team can pull the latest version of the website for development if need be. To do this, you can run the command `npm run-script deploy` from the project root directory. This will transform the various React / SASS files into basic, static HTML, which will be saved in the `public` directory. The `public` directory is what we put on the OCF servers to host the website. To move the contents of the public folder to the OCF, open a connection to the OCF server (you should have the login credentials for your organization) using either SFTP or a SFTP client, and simply move the contents into the `public_html` folder there. You should see your website update with the changes immediately.
+
+The instructions have been simplified here.
+
+1. Make desired changes to the website.
+2. In terminal, `cd` to the project's root directory.
+3. Run `gatsby develop` and open the output'd link in your browser. Check that the changes have taken effect.
+4. Run `git add .`
+5. Run `git commit -m "<MESSAGE ABOUT YOUR CHANGE>"`
+6. Run `git push origin master`
+7. Run `npm run-script deploy`
+8. Drag the contents of the public folder into the `public_html` folder on your OCF account. 

@@ -17,15 +17,6 @@ class Blog extends React.Component {
       access(page, 'data.date')
     ).reverse();
 
-    const backgroundLink = prefixLink(`/assets/blog-landing-tile.jpg`);
-    const style = {
-      'background': "url('" + backgroundLink + "') no-repeat center center",
-      '-webkit-background-size': 'cover',
-      '-moz-background-size': 'cover',
-      '-o-background-size': 'cover',
-      'background-size': 'cover',
-    };
-
     const mostRecentBlogs = sortedPages.map((page) => {
       if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
         const title = access(page, 'data.title') || page.path;
@@ -42,17 +33,27 @@ class Blog extends React.Component {
     });
 
     const regions = [{ title: "Central Asia" }, { title: "East Asia" }, { title: "South Asia" }, { title: "Southeast Asia" }];
-    const byRegion = regions.map((page, i) => (
-      <div key={page.title}>
-        <Link to={prefixLink("/blog/list/?type=region?filter=" + page.title)}>
-          <li>
-            <div className="region-img-container" style={style}></div>
-            <span className="region-title"><span>{page.title}</span></span>
-          </li>
-        </Link>
-      </div>
-    ));
-
+    const byRegion = regions.map((page, i) => {
+      const source = '/assets/' + page.title.toLowerCase().replace(" ", "") + '.jpg';
+      const backgroundLink = prefixLink(source);
+      const style = {
+        'background': "url('" + backgroundLink + "') no-repeat center center",
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover',
+      };
+      return (
+        <div key={page.title}>
+          <Link to={prefixLink("/blog/list/?type=region?filter=" + page.title)}>
+            <li>
+              <div className="region-img-container" style={style}></div>
+              <span className="region-title"><span>{page.title}</span></span>
+            </li>
+          </Link>
+        </div>
+      );
+    });
 
     let archiveYears = this.props.route.pages.map((page, i) => {
       if (access(page, 'file.ext') === 'md' && !page.path.includes('/404')) {
