@@ -129,7 +129,7 @@ export default
 		  "answer": "We encourage submissions from graduate and undergraduate students currently enrolled at the University of California, Berkeley, or that have graduated within the past 12 months. Submissions can be from any discipline, as long as they are related to Asia and are original research."
 	  }, {
 		  "question": "When is the submission deadline?",
-		  "answer": "The current deadline is January 16, 2016."
+		  "answer": "The current deadline is February 7, 2018."
 	  }, {
 		  "question": "What is the submission process?",
 			"answer": "The applicant first submits a publication for selection under the review of the Journal Committee. <span class='p'></span> If selected, the Journal Committee will correspond with the student to involve a Berkeley faculty member, who provides support to the student in the editing process by providing comments and additional feedback for final publication. <span class='p'></span> Your submission(s) must be completed for publication by the deadline set by the Journal Committee. The student will be notified of the opportunity to participate in a research symposium hosted by Berkeley Student Journal for Asian Studies."
@@ -147,7 +147,7 @@ export default
 		  "answer": "The Journal Committee is composed of student scholars involved in Asia-related studies, both undergraduate and graduate."
 	  }, {
 		  "question": "What if I miss the deadline for submission?",
-		  "answer": "Students are encouraged to submit papers at any time up the deadline. However, if you miss our hard deadline (January 16, 2016 at 11:59 pm), then you will not be eligible for publication in this year’s edition of the journal. However, you may still be eligible for publication the following year. <span class='p'></span> If you are unsure of the deadline please email us at <span class='blip'>berkeleysjas@gmail.com</span> and we will inform you."
+		  "answer": "Students are encouraged to submit papers at any time up the deadline. However, if you miss our hard deadline (February 7, 2018 at 11:59 pm), then you will not be eligible for publication in this year’s edition of the journal. However, you may still be eligible for publication the following year. <span class='p'></span> If you are unsure of the deadline please email us at <span class='blip'>berkeleysjas@gmail.com</span> and we will inform you."
 	  }, {
 		  "question": "Is work from previous semesters eligible?",
 		  "answer": "Yes. In our aim to collect Asia-related work, pieces for review and selection do not have to be from the past or current semester. As long as the information provided in the work remains factually correct, submissions need not be time-sensitive."
